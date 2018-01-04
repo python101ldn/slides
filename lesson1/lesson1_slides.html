@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lesson 1 - Introduction to Python</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<!-- Theme set to Simple Serif with custom overrides below -->
+		<link rel="stylesheet" href="../reveal/css/theme/simple.css">
+		<link rel="stylesheet" href="../static/css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section> <!-- TITLE SLIDE -->
+					<br>
+					<h2>Python 101</h2>
+					<h3>Lesson 1<br>Introduction to Programming</h3>
+					<p>
+						<small>Expedia Code Academy</small>
+						<br>
+						<img src="../static/img/code_academy_logo.png" border="0px">
+					</p>
+				</section>
+				<section id="fragments">
+					<h3>What is our mission?</h3>
+					<p class="fragment">
+						<br>Simply put, to get you coding!<br><br>
+					</p>
+					<span class="fragment">
+						By the end of this course, you'll be able to:<br>
+					</span>
+						<ul>
+							<li class="fragment">Understand how code works</li>
+							<li class="fragment">Write basic Python code</li>
+							<li class="fragment">Design a larger program to help you decide where to eat lunch</li>
+						</ul>
+				</section>
+				<section>
+					<h3>Why Python?</h3>
+					<p class="fragment">
+						It's used by a lot of companies<br>
+						<img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" height="120px">
+						<br>
+						It's great for data science<br>
+						<a href="https://research.googleblog.com/2016/10/supercharging-style-transfer.html" target="_blank">
+							<img src="https://2.bp.blogspot.com/-kV4SKTFlWQk/WA6n82yFFJI/AAAAAAAABWY/9GcePSQZ7qcY95b7zVnCBR4ABWR7K2o4gCLcB/s640/image04.png" height="180px"><br>
+						</a>
+						And it's fun to program in!
+					</p>
+				</section>
+				<section>
+					<h3>Installing Python (on Windows)</h3>
+					<p>
+						<ul>
+							<li>Go to <a href="http://www.python.org/">python.org</a> and download Python 3.6</li>
+							<li>Follow the installation instructions but <u>make sure</u> to select the “Add python.exe to Path” option:</li>
+						</ul>
+							<img src="../static/img/installation_screenshot.png" height="220px">
+						<ul>
+							<li>Open the Command Prompt program and type in "python3" to check it has installed</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Installing an Editor</h3>
+					<p>
+					<ul>
+						<li>Go to <a href="https://code.visualstudio.com/">code.visualstudio.com</a> and download</li>
+						<li>Follow the installation instructions!</li>
+						<li>In Visual Studio Code, create a new file in a new folder (no spaces the folder name please) called "test.py"</li>
+						<li>Write the following in the file, save, then press the triangular Run button in the top-right corner</li>
+					</ul>
+					<pre><code class="python">print("Hello, World!")</code></pre>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js' },
+					{ src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+              	history: true,
+			  	progress: false,
+              	center: false, // disable vertical centering of text
+              	transition: 'none'
+			});
+		</script>
+	</body>
+</html>

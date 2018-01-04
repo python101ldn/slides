@@ -1,0 +1,9 @@
+.reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+}
+
+.reveal li {
+    margin: 10px 0;
+}
