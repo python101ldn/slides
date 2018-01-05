@@ -6,20 +6,20 @@
 
 		<title>Lesson 1 - Introduction to Python</title>
 
-		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<!-- Theme set to Simple Serif with custom overrides below -->
-		<link rel="stylesheet" href="../reveal/css/theme/simple.css">
-		<link rel="stylesheet" href="../static/css/custom.css">
+		<link rel="stylesheet" href="reveal/css/theme/simple.css">
+		<link rel="stylesheet" href="static/css/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
@@ -33,7 +33,7 @@
 					<p>
 						<small>Expedia Code Academy</small>
 						<br>
-						<img src="../static/img/code_academy_logo.png" border="0px">
+						<img src="static/img/code_academy_logo.png" border="0px">
 					</p>
 				</section>
 				<section id="fragments">
@@ -70,7 +70,7 @@
 							<li>Go to <a href="http://www.python.org/">python.org</a> and download Python 3.6</li>
 							<li>Follow the installation instructions but <u>make sure</u> to select the “Add python.exe to Path” option:</li>
 						</ul>
-							<img src="../static/img/installation_screenshot.png" height="220px">
+							<img src="static/img/installation_screenshot.png" height="220px">
 						<ul>
 							<li>Open the Command Prompt program and type in "python3" to check it has installed</li>
 						</ul>
@@ -91,8 +91,8 @@
 			</div>
 		</div>
 
-		<script src="../reveal/lib/js/head.min.js"></script>
-		<script src="../reveal/js/reveal.js"></script>
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -100,10 +100,10 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: '../reveal/plugin/markdown/marked.js' },
-					{ src: '../reveal/plugin/markdown/markdown.js' },
-					{ src: '../reveal/plugin/notes/notes.js', async: true },
-					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				],
               	history: true,
 			  	progress: false,
