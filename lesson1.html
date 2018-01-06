@@ -1,115 +1,194 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Lesson 1 - Introduction to Python</title>
+    <title>Lesson 1 - Introduction to Python</title>
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<!-- Theme set to Simple Serif with custom overrides below -->
-		<link rel="stylesheet" href="reveal/css/theme/simple.css">
-		<link rel="stylesheet" href="static/css/custom.css">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!-- Theme set to Simple Serif with custom overrides below -->
+    <link rel="stylesheet" href="reveal/css/theme/simple.css">
+    <link rel="stylesheet" href="static/css/custom.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section> <!-- TITLE SLIDE -->
-					<br>
-					<h2>Python 101</h2>
-					<h3>Lesson 1<br>Introduction to Programming</h3>
-					<p>
-						<small>Expedia Code Academy</small>
-						<br>
-						<img src="static/img/code_academy_logo.png" border="0px">
-					</p>
-				</section>
-				<section id="fragments">
-					<h3>What is our mission?</h3>
-					<p class="fragment">
-						<br>Simply put, to get you coding!<br><br>
-					</p>
-					<span class="fragment">
-						By the end of this course, you'll be able to:<br>
-					</span>
-						<ul>
-							<li class="fragment">Understand how code works</li>
-							<li class="fragment">Write basic Python code</li>
-							<li class="fragment">Design a larger program to help you decide where to eat lunch</li>
-						</ul>
-				</section>
-				<section>
-					<h3>Why Python?</h3>
-					<p class="fragment">
-						It's used by a lot of companies<br>
-						<img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" height="120px">
-						<br>
-						It's great for data science<br>
-						<a href="https://research.googleblog.com/2016/10/supercharging-style-transfer.html" target="_blank">
-							<img src="https://2.bp.blogspot.com/-kV4SKTFlWQk/WA6n82yFFJI/AAAAAAAABWY/9GcePSQZ7qcY95b7zVnCBR4ABWR7K2o4gCLcB/s640/image04.png" height="180px"><br>
-						</a>
-						And it's fun to program in!
-					</p>
-				</section>
-				<section>
-					<h3>Installing Python (on Windows)</h3>
-					<p>
-						<ul>
-							<li>Go to <a href="http://www.python.org/">python.org</a> and download Python 3.6</li>
-							<li>Follow the installation instructions but <u>make sure</u> to select the “Add python.exe to Path” option:</li>
-						</ul>
-							<img src="static/img/installation_screenshot.png" height="220px">
-						<ul>
-							<li>Open the Command Prompt program and type in "python3" to check it has installed</li>
-						</ul>
-					</p>
-				</section>
-				<section>
-					<h3>Installing an Editor</h3>
-					<p>
-					<ul>
-						<li>Go to <a href="https://code.visualstudio.com/">code.visualstudio.com</a> and download</li>
-						<li>Follow the installation instructions!</li>
-						<li>In Visual Studio Code, create a new file in a new folder (no spaces the folder name please) called "test.py"</li>
-						<li>Write the following in the file, save, then press the triangular Run button in the top-right corner</li>
-					</ul>
-					<pre><code class="python">print("Hello, World!")</code></pre>
-					</p>
-				</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section> <!-- TITLE SLIDE -->
+          <br>
+          <h2>Python 101</h2>
+          <h3>Lesson 1<br>Introduction to Programming</h3>
+          <p>
+            <small>Expedia Code Academy</small>
+            <br>
+            <img src="static/img/code_academy_logo.png" border="0px">
+          </p>
+        </section>
+        <section id="fragments">
+          <h3>What is our mission?</h3>
+          <p class="fragment">
+            <br>Simply put, to get you coding!<br><br>
+          </p>
+          <span class="fragment">
+            By the end of this course, you'll be able to:<br>
+          </span>
+            <ul>
+              <li class="fragment">Understand how code works</li>
+              <li class="fragment">Write basic Python code</li>
+              <li class="fragment">Design a larger program to help you decide where to eat lunch</li>
+            </ul>
+        </section>
+        <section>
+          <h3>Why Python?</h3>
+          <p class="fragment">
+            It's used by a lot of companies<br>
+            <img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" height="120px">
+            <br>
+            It's great for data science<br>
+            <a href="https://research.googleblog.com/2016/10/supercharging-style-transfer.html" target="_blank">
+              <img src="https://2.bp.blogspot.com/-kV4SKTFlWQk/WA6n82yFFJI/AAAAAAAABWY/9GcePSQZ7qcY95b7zVnCBR4ABWR7K2o4gCLcB/s640/image04.png" height="180px"><br>
+            </a>
+            And it's fun to program in!
+          </p>
+        </section>
+        <section>
+          <h3>Installing Python (on Windows)</h3>
+          <p>
+            <ul>
+              <li>Go to <a href="http://www.python.org/">python.org</a> and download Python 3.6</li>
+              <li>Follow the installation instructions but <u>make sure</u> to select the “Add python.exe to Path” option:</li>
+            </ul>
+              <img src="static/img/installation_screenshot.png" height="220px">
+          </p>
+        </section>
+        <section>
+          <h3>Installing an Editor</h3>
+          <p>
+            <ul>
+              <li>Go to <a href="https://code.visualstudio.com/">code.visualstudio.com</a> and download</li>
+              <li>Follow the installation instructions!</li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h3>Writing your first line of code</h3>
+          <p>
+            <ul>
+              <li>Create a new file called test.py with the contents:
+                <pre><code class="python">print("Hello, World!")</code></pre>
+              </li>
+              <li>Save it (shortcut Ctrl+S) in a new folder</li>
+              <li>Install the Python extension when prompted, and press Reload on the left</li>
+              <li>Right-click on the file and choose "Run Python File in Terminal" (see the next slide for a screenshot)</li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <img src="static/img/visual_studio_code.png">
+        </section>
+        <section>
+          <h3>Variables</h3>
+          <p>
+            Variables are containers for your data<br><br>
+            The name of the variable is chosen by the software developer (that’s you!)<br><br>
+            Feel free to write the following in a new file (e.g. monty.py)
+            <pre><code class="python" data-trim>
+              my_name = 'Monty'
+              my_age = 100
+            </code></pre>
+          </p>
+        </section>
+        <section>
+          <h3>Variables</h3>
+          <div>
+            <p>We can also change what is inside an existing variable:<br></p>
+            <pre><code class="python" data-trim>
+              my_name = 'Montgomery'
+              print(my_name)
+            </code></pre>
+            What do you think will be printed?<br><br>
+          </div>
+          <div class="fragment">
+            <p>Will the following lines of code work? Why/why not?<br></p>
+            <pre><code class="python" data-trim>
+              my_Name = 'John Cleese'
+              my age = 999
+            </code></pre>
+          </div>
+        </section>
+        <section>
+          <h3>Numbers</h3>
+          <p>
+            Python can do basic maths with pretty big (or small) numbers!<br><br>
+            You can do the usual operations on these numbers:
+            <ul>
+              <li>Addition e.g.  <span id="code">38 + 138</span></li>
+              <li>Subtraction e.g.  <span id="code">500 - 2222</span></li>
+              <li>Multiplication e.g.  <span id="code">33 * 55</span></li>
+              <li>Division e.g.  <span id="code">400 / 3</span></li>
+        </section>
+        <section>
+          <h3>Magic number trick</h3>
+          <p>
+            This is a small exercise to practice creating and changing variables<br><br>
+            For a solution, please see <a href="https://github.com/python101ldn/exercises/blob/master/1_magic_number_solution.py">here</a>
+            <small>
+            <ul>
+              <li class="fragment">Create a variable called start_number, and make it a random number</li>
+              <li class="fragment">Create a variable called doubled, and make it start_number multiplied by 2</li>
+              <li class="fragment">Create a variable called plus_nine, and add 9 to doubled</li>
+              <li class="fragment">Create a variable called minus_three, and subtract 3 from plus_nine</li>
+              <li class="fragment">Create a variable called divide_two, and divide minus_three by 2</li>
+              <li class="fragment">Create a variable called result, and subtract start_number from divide_two</li>
+              <li class="fragment">Print the result</li>
+            </ul>
+          </small>
+        </section>
+        <section>
+          <h3>Strings</h3>
+          <p>
+            Strings are bits of text with apostrophes e.g.<br><span id="code">'I am a String, with 34 characters!'</span><br><br>
+            They can include letters, numbers and symbols - all of these are treated as text only, with no special value!<br><br>
+            What do you think this line of code will do?
+            <pre><code class="python" data-trim>
+              mystery = '1' + '2'
+              print(mystery)
+            </code></pre>
+        </section>
+      </div>
+    </div>
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.js"></script>
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'reveal/plugin/markdown/marked.js' },
-					{ src: 'reveal/plugin/markdown/markdown.js' },
-					{ src: 'reveal/plugin/notes/notes.js', async: true },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				],
-              	history: true,
-			  	progress: false,
-              	center: false, // disable vertical centering of text
-              	transition: 'none'
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'reveal/plugin/markdown/marked.js' },
+          { src: 'reveal/plugin/markdown/markdown.js' },
+          { src: 'reveal/plugin/notes/notes.js', async: true },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+                history: true,
+          progress: false,
+                center: false, // disable vertical centering of text
+                transition: 'none'
+      });
+    </script>
+  </body>
 </html>
