@@ -1,49 +1,120 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Lesson 3 - While loops</title>
 
-		<link rel="stylesheet" href="../reveal/css/reveal.css">
-		<link rel="stylesheet" href="../reveal/css/theme/black.css">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!-- Theme set to Simple Serif with custom overrides below -->
+    <link rel="stylesheet" href="reveal/css/theme/simple.css">
+    <link rel="stylesheet" href="static/css/custom.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- TITLE SLIDE -->
+        <section> 
+          <br>
+          <h2>Python 101</h2>
+          <h3>Lesson 3:<br>while loops</h3>
+          <p>
+            <small>Expedia Code Academy</small>
+            <br>
+            <img src="static/img/code_academy_logo.png" border="0px">
+          </p>
+        </section>
 
-		<script src="../reveal/lib/js/head.min.js"></script>
-		<script src="../reveal/js/reveal.js"></script>
+        <section>
+          <h3>Getting our code to do more</h3>
+          <p>How would we write code to count down and print all numbers from 10?<br></p>
+          <p class="fragment">What about 100? Or 1000?</p>
+          <div class="fragment">
+            By using loops, we can make python evaluate code more than once<br>
+            <pre><code class="python" data-trim>
+              number = 10
+              
+              while number > 0: 
+                  print(number)
+                  number = number - 1
+              
+              print("Blast Off!")
+            </code></pre>
+          </div>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: '../reveal/plugin/markdown/marked.js' },
-					{ src: '../reveal/plugin/markdown/markdown.js' },
-					{ src: '../reveal/plugin/notes/notes.js', async: true },
-					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <section>
+          <h3>While loops</h3>
+          While loops are like <span id="code">if</span> statements,<br>
+          except they keep looping through their block of code until
+          the Boolean is <span id="code">False</span>
+          <br><br>
+          <div class="fragment">
+            What will this code do?
+            <pre><code class="python" data-trim>
+              number = 10
+              
+              while number > 0: 
+                  print(number)
+                  #  number = number - 1
+              
+              print("Blast Off!")
+            </code></pre>
+        </section>
+
+        <section>
+          <h3>Exercises</h3>
+          Using while loops, write programs that can:
+          <div>
+          <ol>
+            <li>print numbers <em>up</em> to 10 (including 0 and 10)</li>
+            <li>print the 19 times table until 1000</li>
+            <li>(harder) print only odd numbers up to 10</li>
+          </ol><br><br>
+          Hint:
+          <pre><code class="python" data-trim>
+            # Use % (known as modulo), the remainder operator
+            10 % 2  # 0, as 10 divided by 2 is 5 with no remainder
+            11 % 4  # 3, as 11 divided by 4 is 2 with a remainder of 3
+          </code></pre>
+
+        </section>
+
+      </div>
+    </div>
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'reveal/plugin/markdown/marked.js' },
+          { src: 'reveal/plugin/markdown/markdown.js' },
+          { src: 'reveal/plugin/notes/notes.js', async: true },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+                history: true,
+          progress: false,
+                center: false, // disable vertical centering of text
+                transition: 'none'
+      });
+    </script>
+  </body>
 </html>
