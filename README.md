@@ -2,8 +2,7 @@
 Course content for python course
 
 ## For students
-- Download the whole project to your computer by clicking the green button on [the project page](https://github.com/python101ldn/python101ldn).
-- To view presentations (e.g. [lesson 1](lesson1/index.html), open the HTML file in a browser.
+- To view the slideshows, please see the links on the [Python 101 website](https://python101ldn.github.io)
 
 ## For teachers
 To see a demo of reveal.js, open [demo.html](demo.html) in a browser.
