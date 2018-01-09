@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 5 - TODO</title>
+    <title>Lesson 5 - Lists and for loops</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -30,7 +30,7 @@
         <section> 
           <br>
           <h2>Python 101</h2>
-          <h3>Lesson 5:<br>TODO</h3>
+          <h3>Lesson 5:<br>Lists and for loops</h3>
           <p>
             <small>Expedia Code Academy</small>
             <br>
@@ -38,6 +38,135 @@
           </p>
         </section>
 
+        <section>
+          <h3>Lists</h3>
+          <p>
+            Lists are ordered collections of data
+              <pre><code class="python" data-trim>
+                expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
+
+                exam_grades = [40, 55, 99, 73]
+              </code></pre><br>
+            <div class="fragment">
+              You can pick out items from a list by using the position<br><br>
+              The position starts from 0!
+            </div>
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                print(expedia_brands[0])  # 'Hotels.com'
+                print(string_list[2])  # 'Expedia'
+
+                print(exam_grades[0])  # 40
+                print(exam_grades[-1])  # 73
+              </code></pre><br>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Why use lists?</h3>
+            <p>
+              A list acts as a single variable to store lots of data<br><br>
+
+              Here are some basic list tricks:
+
+            <pre><code class="python" data-trim>
+              # Start with an empty list
+              sentence = []
+              # Add an item to the end
+              sentence.append('Programming')
+              # Add two lists together (note the reuse of the variable)
+              sentence = ['terrible...', 'is', 'Python', 'in'] + sentence
+              # Reverses the order - note the empty brackets!
+              sentence.reverse()
+              # Remove a matching item
+              sentence.remove('terrible...')
+              sentence.append('great!')
+
+              print(sentence)
+            </code></pre>
+          </p>
+        </section>
+
+        <section>
+          <h3>Fixing our code before it breaks</h3>
+          <p>
+            What happens if we omit any of the punctuation from <span id="code">'terrible...'</span> in the last slide?<br>
+            <div class="fragment">
+              <img src="static/img/terrible_code.png"><br>
+              Our code breaks!
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Fixing our code before it breaks</h3>
+          <p>
+            We can stop this from happening by checking the element exists first
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                sentence = ['Programming', 'in', 'Python', 'is', 'terrible...']
+
+                word_to_remove = 'terrible...'
+
+                if word_to_remove in sentence:
+                    sentence.remove(word_to_remove)
+                    sentence.append('great!')
+                else:
+                    sentence.append('...NOT!')
+
+                print(sentence)
+              </code></pre>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Looping</h3>
+          <p>
+            Since lists contain lots of items, we can use <span id="code">while</span> to loop through them
+
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                sentence = ['Programming', 'in', 'Python', 'is', 'great!']
+
+                formatted = ''  # an empty string
+                position = 0
+                
+                while position < len(sentence):
+                    formatted = formatted + ' ' + sentence[position]
+                    position = position + 1
+
+                print(formatted)
+              </code></pre>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>For loops</h3>
+          <p>
+            However, it's a pain to keep track of the list position!<br><br>
+            This is what <span id="code">for</span> loops do:
+
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                some_numbers = [0, 28374, 39, 4]
+
+                total = 0
+
+                for number in some_numbers:
+                    total = total + number
+
+                print(total)
+              </code></pre>
+            </div>
+
+            <div class="fragment">
+              The <span id="code">number</span> variable is recreated every round of the loop, with the value of the next item in the list
+            </div>
+          </p>
+        </section>
       </div>
     </div>
 
