@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 2 - TODO</title>
+    <title>Lesson 2 - Booleans and Conditionals</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -30,7 +30,7 @@
         <section> 
           <br>
           <h2>Python 101</h2>
-          <h3>Lesson 2:<br>TODO</h3>
+          <h3>Lesson 2:<br>Booleans and Conditional Statements</h3>
           <p>
             <small>Expedia Code Academy</small>
             <br>
@@ -38,8 +38,177 @@
           </p>
         </section>
 
+        <section id="fragments">
+          <h3>Data types so far</h3>
+          <p class="fragment">
+            <br>We have seen two types of data already:<br><br>
+          </p>
+          <ul>
+            <li class="fragment">Numbers: 0, 249, -124.5</li>
+            <li class="fragment">Strings: 'hello', 'I am 23 years old.'</li>
+          </ul>
+        </section>
+
+         <section id="fragments">
+          <h3>Another data type: Booleans</h3>
+          <br>
+          Another datatype we will use is <b>Boolean</b><br>
+          It can take two values - <b>True</b> or <b>False</b><br>
+
+          <pre><code class="python" data-trim>
+          my_boolean = 5 > 2
+          print(my_boolean)
+
+          another_boolean = 3.14 < -3
+          print(another_boolean)
+          </code></pre>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Comparisons</h3>
+          <br>
+          
+          We saw examples of how to compare two numbers.<br> 
+          We can also test for equality, using the == operator.
+
+          <pre><code class="python" data-trim>
+              first_number = 12 / 3
+              second_number = 2 * 2
+              are_equal = first_number == second_number
+              print(are_equal)
+          </code></pre>
+          
+
+          We can also combine comparisons and equality:
+
+          <pre><code class="python" data-trim>
+          2 <= 5 #but not 2 =< 5, order matters!
+
+          242 >= 242 #but not 242 => 2
+          </code></pre>
+
+
+        </section>
+
+        <section id="fragments">
+          <h3>Conditional execution</h3>
+          <br>
+
+          Your program won’t always know what to do in advance!<br><br>
+
+          In order to write useful programs, we need the ability to check conditions and change the behavior of the program accordingly.<br>
+      
+        </section>
+
+        <section id="fragments">
+          <h3>Conditional execution</h3>
+
+          Conditional statements give us this ability. The simplest form is the <b>if</b> statement:
+
+          <pre><code class="python" data-trim>
+          if x > 0:
+            print('x is positive')
+          </code></pre>
+
+          <br>
+          Things that matter:
+          <br>
+          <ul>
+            <li class="fragment">4 spaces or a tab</li>
+            <li class="fragment">The colon</li>
+          </ul>
+          
+        </section>
+
+        <section id="fragments">
+          <h3>Conditionals</h3>
+          <br>
+          The indentation (4 spaces or a tab) before each statement determine whether it belogs to the <b>if</b> or not.
+
+          <pre><code class="python" data-trim>
+          if x > 0:
+            print('x is positive')
+          print('a message that always gets printed')
+          </code></pre>
+
+          <pre><code class="python" data-trim>
+          if x > 0:
+            print('x is positive')
+            print('a message that gets printed only when x is positive')
+          </code></pre>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Conditionals</h3>
+          <br>
+          A second form of the if statement is alternative execution.<br><br>
+          There are two possibilities and the condition determines which one gets executed.<br>
+
+          <pre><code class="python" data-trim>
+          if x > 0:
+            print('x is positive')
+          else:
+            print('x is negative')
+          </code></pre>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Exercise</h3>
+          <br>
+          <small>
+          <ul>
+            <li>Create a variable called <b>age</b>.</li>
+            <li>Write an if statement, which checks if someone of that age is allowed to drink. They are only if they're 18 and over.</li>
+            <li>If they are allowed - print "Can drink!".</li>
+            <li>If they are not - print "You have x years left till you can start drinking!" where you replace x with the number of years left.</li>
+          </ul>
+          </small>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Conditionals</h3>
+          <br>
+          Sometimes there are more than two possibilities and we need more than two branches.<br>
+          One way to express a computation like that is a chained conditional:
+
+          <pre><code class="python" data-trim>
+          if x > 0:
+            print('x is positive')
+          elif x == 0:
+            print('x is equal to 0')
+          else:
+            print('x is negative')
+          </code></pre>
+          
+          elif is an abbreviation of “else if”<br>
+          Please note that <b>only one</b> branch will be executed.
+
+        </section>
+
+        <section id="fragments">
+          <h3>Exercise</h3>
+          <br>
+          <small>
+          <ul>
+            <li>Create a variable called grade.</li>
+            <li>Write an if statement, which will decide the mark a student will get based on their grade.</li>
+            <li>If they get a grade higher than or equal to 60 - print 'Pass'.</li>
+            <li>However, if they get a grade higher than 80 - print 'Distinction'.</li>
+            <li>If their grade is lower than 60 - print 'Fail'.</li>
+          </ul>
+          </small>
+        </section>
+
+
+
+
       </div>
     </div>
+
 
     <script src="reveal/lib/js/head.min.js"></script>
     <script src="reveal/js/reveal.js"></script>
