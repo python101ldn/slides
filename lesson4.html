@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 4 - TODO</title>
+    <title>Lesson 4 - Lists</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -36,6 +36,164 @@
             <br>
             <img src="static/img/code_academy_logo.png" border="0px">
           </p>
+        </section>
+
+        <section id="fragments">
+          <h3>Lists</h3>
+          <br>A list is an ordered set of values, where each value is identified by an index.<br>
+          Each of those values is called an element of the list.
+          <br><br>
+          <pre><code class="python" data-trim>
+              # a list of strings
+              expedia_brands = ['Hotels.com', 'EAN', 'Expedia'] 
+              # a list of numbers
+              exam_grades = [40, 55, 99, 73]
+              # a list containing mixed types
+              a_bit_of_everything = ['hello!', 2, True, 0.535]
+              # a list of lists
+              words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
+          </code></pre>
+        </section>
+
+        <section id="fragments">
+          <h3>Lists</h3>
+          <pre><code class="python" data-trim>
+              # a list of strings
+              expedia_brands = ['Hotels.com', 'EAN', 'Expedia'] 
+              # a list of numbers
+              exam_grades = [40, 55, 99, 73]
+          </code></pre>
+
+          <div class="fragment">
+              You can pick out items from a list by using their index.<br>
+              The index starts from 0!
+          </div>
+
+          <div class="fragment">
+              <pre><code class="python" data-trim>
+                print(expedia_brands[0])  # 'Hotels.com'
+                print(expedia_brands[2])  # 'Expedia'
+
+                print(exam_grades[0])  # 40
+                print(exam_grades[-1])  # 73
+                print(exam_grades[-2])  # 55
+              </code></pre><br>
+          </div>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Lists exercise</h3>
+        
+          Write a program to sum all numbers in a given list and print it.
+
+        </section>
+
+        <section id="fragments">
+          <h3>Why use lists?</h3>
+            <p>
+              A list acts as a single variable to store lots of data<br><br>
+
+              Here are some basic list tricks:
+
+            <pre><code class="python" data-trim>
+              # Start with an empty list
+              sentence = ['Programming', 'is']
+              # Add an item to the end
+              sentence.append('fun')
+
+              print(sentence)
+            </code></pre>
+          </p>
+        </section>
+
+        <section id="fragments">
+          <h3>Why use lists?</h3>
+
+          We can concatenate two lists
+
+          <pre><code class="python" data-trim>
+            # Create two lists
+            sentence_start = ['Programming', 'is']
+            sentence_end = ['really', 'fun']
+            
+            # Join the two lists together using the + operator
+            sentence = sentence_start + sentence_end
+            print(sentence)
+          </code></pre>
+
+          It is useful to know the number of items in a list too:
+          <pre><code class="python" data-trim>
+            # Create a list
+            sentence = ['Programming', 'is', 'really', 'fun']
+            
+            length = len(sentence)
+            print(length) # 4
+          </code></pre>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Why use lists?</h3>
+
+          Sometimes it's useful to find if an element exists in a given list.
+
+          <pre><code class="python" data-trim>
+            expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
+
+            if 'Booking.com' in expedia_brands:
+              print('Something must be wrong!')
+
+            if 'Hotels.com' in expedia_brands:
+              print('Yay!')
+          </code></pre>
+
+          There are shortcuts of creating lists of numbers:
+          <pre><code class="python" data-trim>
+            # Create a list containing the numbers from 1 to 5
+            numbers = range(1, 6) #note that the upper end is non-inclusive
+          </code></pre>
+
+        </section>
+
+        <section id="fragments">
+          <h3>Why use lists?</h3>
+
+          We can sort lists too
+
+          <pre><code class="python" data-trim>
+            random_numbers = [5, 3, 4, 6, 1, 2]
+            sorted_numbers = sorted(random_numbers)
+            print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
+          </code></pre>
+
+          Or just take slices of a list
+          <pre><code class="python" data-trim>
+            letters = ['a', 'b', 'c', 'd', 'e', 'f']
+            letters[1:3] # results in ['b', 'c']
+            letters[2:3] # results in ['c']
+          </code></pre>
+        </section>
+
+        <section id="fragments">
+          <h3>Exercises</h3>
+          Using while loops and lists, write programs that can:
+
+          <div>
+          <ol>
+
+            <pre><code class="python" data-trim>
+            random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
+            </code></pre>
+            <li>Using the list above, find the largest number and print it.</li>
+            <li>Using the list above, filter out only the negative numbers, create a list with them and print it.</li>
+            <li> Using the list above, find the average value of all numbers in it.
+            <br>
+            <li>(harder) From a list of numbers, find the largest possible sum of two of them.</li>
+            <li></li>
+          </ol><br><br>
+
+          
         </section>
 
       </div>
