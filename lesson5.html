@@ -86,6 +86,33 @@
         </section>
 
         <section>
+          <h3>Strings can be treated like lists</h3>
+          <div>
+            <p>
+            What do we think this code will do?<br>
+            </p>
+            <pre><code class="python" data-trim>
+              my_string = 'Today is a great day!'
+              print(my_string[0])
+            </code></pre>
+          </div>
+          <br>
+
+          <div class="fragment">
+            <p>
+              That's right, strings are simply lists of characters! You can write code such as:<br>
+              <pre><code class="python" data-trim>
+                count_letter_a = 0
+                my_string = 'Today is a great day!'
+                
+                for letter in my_string:
+                    ???
+              </code></pre>
+            </p>
+          </div>
+        </section>
+
+        <section>
           <h3>Exercises</h3><br>
           <ol>
             <li>Reverse and print text given by a user using <span id="code">input()</span></li>
@@ -101,7 +128,9 @@
               <a href="https://github.com/python101ldn/exercises/blob/master/5_dont_repeat_code.py" target="_blank">
                 here
               </a>
-              for example output.</li>
+              for example output.
+            </li>
+            <li>(challenging) Write a Hangman game!
           </ol>
         </section>
 
