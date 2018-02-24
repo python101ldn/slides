@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 6 - TODO</title>
+    <title>Lesson 6 - Dictionaries</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -30,12 +30,137 @@
         <section> 
           <br>
           <h2>Python 101</h2>
-          <h3>Lesson 6:<br>TODO</h3>
+          <h3>Lesson 6:<br>Dictionaries</h3>
           <p>
             <small>Expedia Code Academy</small>
             <br>
             <img src="static/img/code_academy_logo.png" border="0px">
           </p>
+        </section>
+
+        <section>
+          <h3>Dictionaries</h3>
+          <p>
+            So far we have seen lists - collections of data, where each element has an index. This index is a number. <br><br>
+
+            Dictionaries are similar to lists, except the index of each element can be a string too!
+
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                eng_to_sp = {} # create an empty dictionary
+
+                eng_to_sp['one'] = 'uno' # add information to it
+                eng_to_sp['two'] = 'dos'
+
+                print(eng_to_sp)
+              </code></pre>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Dictionaries</h3>
+          <p>
+            The indices are called <b>keys</b>.<br>
+            Each key has a <b>value</b> associated with it.<br>
+            So the elements are valled <b>key-value pairs</b>.<br><br>
+
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                # We can define the dictionary in one line too
+                eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+
+                print(eng2sp['one']) # to print a value from the dictionary
+              </code></pre>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Dictionary operations</h3>
+
+          We can reassign values for keys or delete key-value pairs!<br>
+          <p>
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+                print(inventory)
+
+                # If someone buys all the pears, we can reassign their value
+                inventory['pears'] = 0
+
+                # Or if we expect to stock no more pears, we can delete the value!
+                del inventory['pears']
+
+                # Let's print what is left in the dictionary
+                print(inventory)
+
+                # We can find the number of key-value pairs in the dictionary
+                len(inventory) # just like for lists   
+              </code></pre>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Dictionary methods</h3>
+
+          We can get lists of all keys or all values.
+          <p>
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+                print(inventory.keys()) # to print the keys
+                print(inventory.values()) # to print the values
+              </code></pre>
+            </div>
+          </p>
+
+          <span class="fragment">
+          Or we can check if a dictionary contains a given key, just like in lists. <br>
+          </span>
+
+          <p>
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+                'apples' in inventory # will return True
+                'oranges' in inventory # will return False
+              </code></pre>
+            </div>
+          </p>
+
+        </section>
+
+        <section>
+          <h3>Dictionary exercises</h3>
+          <small>
+          <ol>
+            <li>
+              Write a program that creates a dictionary that contains the numbers between 1 and 15 and their square. Use loops. (the value of 1 is 1, the value of 2 is 4, etc.)<br><br>
+            </li>
+
+            <li> Write a program that tracks the count of the letters from a string.<br>
+              Given the string - "Python is fun." the expected output is:<br>
+              {'P': 1, 'y': 1, 't': 1, 'h': 1, 'o': 1, 'n': 2, '  ': 2, 'i': 1, 's': 1, 'f': 1, 'u': 1, '.': 1}
+            </li>
+
+            <li>
+             (harder) There are 36 possible scenarios when throwing a pair of dice.<br>
+             The possible sums are between 2 and 12.<br>
+
+             Write a program that creates a dictionary where the keys are the possible sums and the values are how many dice combinations can make that sum.<br>
+
+             For instance, the sum 2 can be achieved in one way only - the two dice have value 1.<br>
+             The sum 3 can be achieved in 2 ways - with dice combinations (1, 2) and (2, 1).
+            </li>
+            
+          </ol>
+        </small>
+
         </section>
 
       </div>
