@@ -79,14 +79,14 @@
         <section>
           <h3>Dictionary operations</h3>
 
-          We can reassign values for keys or delete key-value pairs!<br>
+          We can reassign values for keys or delete key-value pairs!
           <p>
             <div class="fragment">
               <pre><code class="python" data-trim>
                 inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
-                print(inventory)
-
+                # We can add oranges to our inventory
+                inventory['oranges'] = 317
                 # If someone buys all the pears, we can reassign their value
                 inventory['pears'] = 0
 
@@ -144,8 +144,8 @@
             </li>
 
             <li> Write a program that tracks the count of the letters from a string.<br>
-              Given the string - "Python is fun." the expected output is:<br>
-              {'P': 1, 'y': 1, 't': 1, 'h': 1, 'o': 1, 'n': 2, '  ': 2, 'i': 1, 's': 1, 'f': 1, 'u': 1, '.': 1}
+              Given the string - "expedia" the expected output is:<br>
+              {'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}
             </li>
 
             <li>
