@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 7 - TODO</title>
+    <title>Lesson 7 - Functions</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -30,11 +30,86 @@
         <section> 
           <br>
           <h2>Python 101</h2>
-          <h3>Lesson 7:<br>TODO</h3>
+          <h3>Lesson 7:<br>Functions</h3>
           <p>
             <small>Expedia Code Academy</small>
             <br>
             <img src="static/img/code_academy_logo.png" border="0px">
+          </p>
+        </section>
+
+        <section>
+          <h3>Functions</h3>
+          <p>
+            Functions are bits of code that are <i>reusable</i>. This is handy because:<br>
+            <ul>
+              <li class="fragment">You don't have to type as much</li>
+              <li class="fragment">It's easier to read</li>
+              <li class="fragment">If there's a mistake you only need to fix it once!</li>
+            </ul>
+          </p>
+          <div class="fragment">
+            Examples:
+            <pre><code class="python" data-trim>
+              # The print function with 1 argument: a string
+              print("hello")
+              
+              # The len function with 1 argument: a list
+              len([0, 1, 2, 3])
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Creating your own functions</h3>
+          <p>
+            <br>The syntax involves these key words: <span id="code">def</span> and <span id="code">return</span><br><br>
+            Here's a function that adds 2 number <i>arguments</i> together:
+          
+            <pre><code class="python" data-trim>
+              def add_two_numbers(num1, num2):
+                  return num1 + num2
+
+              # Let's call our function!
+              result = add_two_numbers(612, 847)
+            </code></pre>
+          </p>
+        </section>
+
+        <section>
+          <h3>Things to remember</h3>
+          <p>
+            <br>Always write your function before you call it!<br>
+            The below won't work - what error do you get?
+          
+            <pre><code class="python" data-trim>
+              # Let's call our function!
+              result = add_two_numbers(612, 847)
+
+              def add_two_numbers(num1, num2):
+                  return num1 + num2
+            </code></pre>
+
+            <br>How about this?
+            <div id="fragment">
+              <pre><code class="python" data-trim>
+                result = add_two_numbers(612, 847, 555)
+              </code></pre>
+            </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>Different arguments</h3>
+          <p>
+            <br>What will <span id="code">result</span> be in this example?<br><br>
+          
+            <pre><code class="python" data-trim>
+              def add_two_numbers(num1, num2):
+                  return num1 + num2
+
+              result = add_two_numbers('my hovercraft is ', 'full of eels')
+            </code></pre>
           </p>
         </section>
 
@@ -55,10 +130,11 @@
           { src: 'reveal/plugin/notes/notes.js', async: true },
           { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ],
-                history: true,
+          history: true,
           progress: false,
-                center: false, // disable vertical centering of text
-                transition: 'none'
+          center: false, // disable vertical centering of text
+          transition: 'none',
+          slideNumber: true
       });
     </script>
   </body>
