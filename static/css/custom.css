@@ -11,3 +11,7 @@
 .reveal #code {
 	font-family: monospace;
 }
+
+.a {
+	text-decoration: underline;
+}
