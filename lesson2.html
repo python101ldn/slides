@@ -38,91 +38,122 @@
           </p>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Data types so far</h3>
-          <p class="fragment">
-            <br>We have seen two types of data already:<br><br>
+          <p>
+            <br>We have seen two types of data already:<br>
           </p>
           <ul>
-            <li class="fragment">Numbers: 0, 249, -124.5</li>
-            <li class="fragment">Strings: 'hello', 'I am 23 years old.'</li>
+            <li class="fragment">Numbers:
+              <span id="code">
+                <ul>
+                  <li>0</li>
+                  <li>-124.5</li>
+                </ul>
+              </span>
+            </li>
+            <li class="fragment">Strings:
+              <span id="code">
+                <ul>
+                  <li>'hello'</li>
+                  <li>'I am 99 years old!'</li>
+                </ul>
+              </span>
+            </li>
           </ul>
         </section>
 
-         <section id="fragments">
+         <section>
           <h3>Another data type: Booleans</h3>
+          <p>
+            A really useful data type is a <b>Boolean</b>
+            <br><br>
+            It can take two values - <b>True</b> or <b>False</b>
+            <br><br>
+          </p>
+
+          <div class="fragment">
+            <pre><code class="python" data-trim>
+            my_boolean = 5 > 2
+            print(my_boolean)
+
+            another_boolean = 3.14 < -3
+            print(another_boolean)
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Comparisons</h3>  
+          <div class="fragment">
+            <p>We can also test for equality, using the == operator.</p>
+
+            <pre><code class="python" data-trim>
+                first_number = 12 / 3
+                second_number = 2 * 2
+                are_equal = first_number == second_number
+                print(are_equal)
+            </code></pre>
+          </div>
+
           <br>
-          Another datatype we will use is <b>Boolean</b><br>
-          It can take two values - <b>True</b> or <b>False</b><br>
+          
+          <div class="fragment">
+            <p>We can also do "less-than-or-equal" and "greater-than-or-equal" comparisons:</p>
 
-          <pre><code class="python" data-trim>
-          my_boolean = 5 > 2
-          print(my_boolean)
+            <pre><code class="python" data-trim>
+            2 <= 5  # but not 2 =< 5, order matters!
 
-          another_boolean = 3.14 < -3
-          print(another_boolean)
-          </code></pre>
+            242 >= 242  # but not 242 => 2
+            </code></pre>
+          </div>
+
 
         </section>
 
-        <section id="fragments">
-          <h3>Comparisons</h3>
-          <br>
-          
-          We saw examples of how to compare two numbers.<br> 
-          We can also test for equality, using the == operator.
-
-          <pre><code class="python" data-trim>
-              first_number = 12 / 3
-              second_number = 2 * 2
-              are_equal = first_number == second_number
-              print(are_equal)
-          </code></pre>
-          
-
-          We can also combine comparisons and equality:
-
-          <pre><code class="python" data-trim>
-          2 <= 5 #but not 2 =< 5, order matters!
-
-          242 >= 242 #but not 242 => 2
-          </code></pre>
-
-
-        </section>
-
-        <section id="fragments">
+        <section>
           <h3>Conditional execution</h3>
-          <br>
-
-          Your program won’t always know what to do in advance!<br><br>
-
-          In order to write useful programs, we need the ability to check conditions and change the behavior of the program accordingly.<br>
-      
+          <p>
+            <br>
+            Your program won’t always know what to do in advance!
+            <br><br>
+          </p>
+        
+          <p class="fragment">
+            In order to write useful programs, we need the ability to check conditions and change the behavior of the program accordingly.
+            <br>
+          </p>
         </section>
 
-        <section id="fragments">
-          <h3>Conditional execution</h3>
+        <section>
+          <h3>What if...?</h3>
+          <div>
+            Conditional statements give us this ability.
+            <br><br>
+            The simplest form is the <b>if</b> statement:
 
-          Conditional statements give us this ability. The simplest form is the <b>if</b> statement:
+            <pre><code class="python" data-trim>
+            if x > 0:
+              print('x is positive')
+            </code></pre>
+          </div>
 
-          <pre><code class="python" data-trim>
-          if x > 0:
-            print('x is positive')
-          </code></pre>
-
-          <br>
-          Things that matter:
-          <br>
-          <ul>
-            <li class="fragment">4 spaces or a tab</li>
-            <li class="fragment">The colon</li>
-          </ul>
-          
+          <div>
+            <p class="fragment">
+              <br>
+              Syntax is important! You'll need these:
+              <br>
+            </p>
+            
+            <ul>
+              <li class="fragment">4 spaces before any line <u>under the if</u></li>
+              <li class="fragment">A colon after your boolean</li>
+            </ul>
+          </div>
         </section>
 
-        <section id="fragments">
-          <h3>Conditionals</h3>
+        <section>
+          <h3>Indentation</h3>
           <br>
           The indentation (4 spaces or a tab) before each statement determine whether it belogs to the <b>if</b> or not.
 
@@ -140,84 +171,88 @@
 
         </section>
 
-        <section id="fragments">
-          <h3>Conditionals</h3>
-          <br>
-          A second form of the if statement is alternative execution.<br><br>
-          There are two possibilities and the condition determines which one gets executed.<br>
+        <section>
+          <h3>If/else</h3>
+          <p>
+            <br>
+            <pre><code class="python" data-trim>
+              if x > 0:
+                  print('x is positive')
+              else:
+                  print('x is negative')
+            </code></pre>
+          </p>
 
-          <pre><code class="python" data-trim>
-          if x > 0:
-            print('x is positive')
-          else:
-            print('x is negative')
-          </code></pre>
-
+          <p class="fragment">
+            <br>
+            The code under <span id="code">else</span> gets executed when the if boolean is False.
+            <br><br>
+            They are mutually exclusive!
+          </p>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Exercise</h3>
           <br>
           <small>
           <ul>
             <li>Create a variable called <b>age</b>.</li>
-            <li>Write an if statement, which checks if someone of that age is allowed to drink. They are only if they're 18 and over.</li>
+            <li>Write an if statement which checks if someone of that age is allowed to drink. They are only if they're 18 and over.</li>
             <li>If they are allowed - print "Can drink!".</li>
             <li>If they are not - print "You have to wait!"</li>
           </ul>
 
           <br><br>
           For a solution, please see 
-            <a href="https://github.com/python101ldn/exercises/blob/master/2_age_check_solution.py" target="_blank">
+            <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/age_check_solution.py" target="_blank">
               here
             </a>
           </small>
 
         </section>
 
-        <section id="fragments">
-          <h3>Conditionals</h3>
-          <br>
-          Sometimes there are more than two possibilities and we need more than two branches.<br>
-          One way to express a computation like that is a chained conditional:
+        <section>
+          <h3>If/elif/else</h3>
+          <p>
+            Sometimes there are more than two possibilities, so you need more than True/False or if/else.
+            <br>
+          </p>
 
-          <pre><code class="python" data-trim>
-          if x > 0:
-            print('x is positive')
-          elif x == 0:
-            print('x is equal to 0')
-          else:
-            print('x is negative')
+          <pre class="fragment"><code class="python" data-trim>
+            if x > 0:
+                print('x is positive')
+            elif x == 0:
+                print('x is equal to 0')
+            else:
+                print('x is negative')
           </code></pre>
           
-          elif is an abbreviation of “else if”<br>
-          Please note that <b>only one</b> branch will be executed.
-
+          <p class="fragment">
+            <span id="code">elif</span> is an abbreviation of “else if”
+            <br><br>
+            Please note that <b>only one</b> branch will be executed, and priority starts from the top!
+          </p>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Exercise</h3>
           <br>
           <small>
-          <ul>
-            <li>Create a variable called grade.</li>
-            <li>Write an if statement, which will decide the mark a student will get based on their grade.</li>
-            <li>If they get a grade higher than or equal to 60 - print 'Pass'.</li>
-            <li>However, if they get a grade higher than 80 - print 'Distinction'.</li>
-            <li>If their grade is lower than 60 - print 'Fail'.</li>
-          </ul>
+            <ul>
+              <li>Create a variable called grade.</li>
+              <li>Write an if statement, which will decide the mark a student will get based on their grade.</li>
+              <li>If they get a grade higher than or equal to 60 - print 'Pass'.</li>
+              <li>However, if they get a grade higher than 80 - print 'Distinction'.</li>
+              <li>If their grade is lower than 60 - print 'Fail'.</li>
+            </ul>
 
-          <br><br>
-          For a solution, please see 
-            <a href="https://github.com/python101ldn/exercises/blob/master/2_grades_exercise.py" target="_blank">
+            <br><br>
+            For a solution, please see 
+            <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/grades_solution.py" target="_blank">
               here
             </a>
           </small>
         </section>
-
-
-
-
       </div>
     </div>
 
@@ -236,10 +271,11 @@
           { src: 'reveal/plugin/notes/notes.js', async: true },
           { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ],
-                history: true,
+          history: true,
           progress: false,
-                center: false, // disable vertical centering of text
-                transition: 'none'
+          center: false, // disable vertical centering of text
+          transition: 'none',
+          slideNumber: true
       });
     </script>
   </body>
