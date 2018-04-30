@@ -64,11 +64,12 @@
         </section>
 
          <section>
-          <h3>Another data type: Booleans</h3>
+          <h3>Booleans</h3>
           <p>
+            <br>
             A really useful data type is a <b>Boolean</b>
-            <br><br>
-            It can take two values - <b>True</b> or <b>False</b>
+            <br>
+            It can represent two values - <b>True</b> or <b>False</b>
             <br><br>
           </p>
 
@@ -86,7 +87,7 @@
         <section>
           <h3>Comparisons</h3>  
           <div class="fragment">
-            <p>We can also test for equality, using the == operator.</p>
+            <p>We can also test for equality using ==</p>
 
             <pre><code class="python" data-trim>
                 first_number = 12 / 3
@@ -107,20 +108,18 @@
             242 >= 242  # but not 242 => 2
             </code></pre>
           </div>
-
-
         </section>
 
         <section>
-          <h3>Conditional execution</h3>
+          <h3>Why is this useful?</h3>
           <p>
             <br>
-            Your program won’t always know what to do in advance!
+            Imagine a program powering a website. A user can only login if their password is correct...
             <br><br>
           </p>
         
           <p class="fragment">
-            In order to write useful programs, we need the ability to check conditions and change the behavior of the program accordingly.
+            But this means we need to execute different pieces of code depending on whether this condition is <b>True</b> or not!
             <br>
           </p>
         </section>
@@ -128,13 +127,12 @@
         <section>
           <h3>What if...?</h3>
           <div>
-            Conditional statements give us this ability.
-            <br><br>
-            The simplest form is the <b>if</b> statement:
+            <br>
+            The simplest way to do this is the <b>if</b> statement:
 
             <pre><code class="python" data-trim>
             if x > 0:
-              print('x is positive')
+                print('x is positive')
             </code></pre>
           </div>
 
@@ -155,7 +153,7 @@
         <section>
           <h3>Indentation</h3>
           <br>
-          The indentation (4 spaces or a tab) before each statement determine whether it belogs to the <b>if</b> or not.
+          The indentation (4 spaces or a tab) before each statement determine whether it belongs to the <b>if</b> or not.
 
           <pre><code class="python" data-trim>
           if x > 0:
