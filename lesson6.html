@@ -79,7 +79,7 @@
         <section>
           <h3>Dictionary operations</h3>
 
-          We can reassign values for keys or delete key-value pairs!
+          We can change the value for a given key or delete key-value pairs!
           <p>
             <div class="fragment">
               <pre><code class="python" data-trim>
@@ -112,8 +112,8 @@
               <pre><code class="python" data-trim>
                 inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
-                print(inventory.keys()) # to print the keys
-                print(inventory.values()) # to print the values
+                print(inventory.keys()) # will print ['apples', 'pears', 'bananas']
+                print(inventory.values()) # will print [320, 228, 420]
               </code></pre>
             </div>
           </p>
@@ -140,22 +140,24 @@
           <small>
           <ol>
             <li>
-              Write a program that creates a dictionary that contains the numbers between 1 and 15 and their square. Use loops. (the value of 1 is 1, the value of 2 is 4, etc.)<br><br>
+              (⭐️⭐️)
+              Start with an empty dictionary. Use loops to add the numbers between 1 and 15 as keys and their square as values. The expected output is: <br> {1: 1, 2: 4, 3: 9, ....}<br><br>
             </li>
 
-            <li> Write a program that tracks the count of the letters from a string.<br>
+            <li> (⭐️⭐️) Write a program that tracks the count of the letters from a string.<br>
               Given the string - "expedia" the expected output is:<br>
               {'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}
             </li><br>
 
             <li>
-             (harder) There are 36 possible scenarios when throwing a pair of dice.<br>
+             (⭐️⭐️⭐️🔥) There are 36 possible scenarios when throwing a pair of dice.<br>
              The possible sums are between 2 and 12.<br>
 
              Write a program that creates a dictionary where the keys are the possible sums and the values are how many dice combinations can make that sum.<br>
 
              For instance, the sum 2 can be achieved in one way only - the two dice have value 1.<br>
-             The sum 3 can be achieved in 2 ways - with dice combinations (1, 2) and (2, 1).
+             The sum 3 can be achieved in 2 ways - with dice combinations (1, 2) and (2, 1).<br>
+             The example output would be: {2: 1, 3: 2, 4: 3, ...}
             </li>
             
           </ol>
