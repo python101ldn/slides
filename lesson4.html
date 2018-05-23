@@ -38,12 +38,15 @@
           </p>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Lists</h3>
-          <br>A list is an ordered set of values, where each value is identified by an index (its position in the list).<br>
-          Each of those values is called an element of the list.
-          <br><br>
-          <pre><code class="python" data-trim>
+          <p class="fragment">
+            A list is an ordered set of values, where each value is identified by an index (its position in the list).
+            <br><br>
+            Each of those values is called an element of the list.
+            <br><br>
+          </p>
+          <pre class="fragment"><code class="python" data-trim>
               # a list of strings
               expedia_brands = ['Hotels.com', 'EAN', 'Expedia'] 
               # a list of numbers
@@ -55,7 +58,7 @@
           </code></pre>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Lists</h3>
           <pre><code class="python" data-trim>
               # a list of strings
@@ -82,7 +85,7 @@
 
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Lists exercise</h3>
 
           It is useful to know the number of items in a list too:
@@ -94,20 +97,25 @@
             print(length) # 4
           </code></pre>
 
-          <pre><code class="python" data-trim>
-            random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
+          <br>
+
+          <div class="fragment">
+            <pre><code class="python" data-trim>
+              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
             </code></pre>
-        
-          (⭐️) Write a program to sum all numbers in the list above and print it. <br><br>
+            (⭐️) 4a. Write a program to add all the numbers in the list above together, and then print the result.
+            <br><br>
+          </div>
 
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Why use lists?</h3>
-            <p>
-              A list acts as a single variable to store lots of data<br><br>
-
-              Here are some basic list tricks:
+          <p>
+            <br>
+            A list acts as a single variable to store lots of data.
+            <br><br>
+            Here are some basic list tricks:
 
             <pre><code class="python" data-trim>
               # Start with an empty list
@@ -120,10 +128,10 @@
           </p>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Why use lists?</h3>
-
-          We can concatenate two lists
+          <br>
+          We can concatenate two lists together.
 
           <pre><code class="python" data-trim>
             # Create two lists
@@ -137,9 +145,9 @@
 
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Why use lists?</h3>
-
+          <br>
           Sometimes it's useful to find if an element exists in a given list.
 
           <pre><code class="python" data-trim>
@@ -151,58 +159,71 @@
             if 'Hotels.com' in expedia_brands:
               print('Yay!')
           </code></pre>
-
-          There are shortcuts of creating lists of numbers:
-          <pre><code class="python" data-trim>
-            # Create a list containing the numbers from 1 to 5
-            numbers = range(1, 6) #note that the upper end is non-inclusive
-          </code></pre>
-
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Why use lists?</h3>
 
-          We can sort lists too
-
-          <pre><code class="python" data-trim>
+          We can sort lists:
+          <pre class="fragment"><code class="python" data-trim>
             random_numbers = [5, 3, 4, 6, 1, 2]
             sorted_numbers = sorted(random_numbers)
             print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
           </code></pre>
 
-          Or just take slices of a list
-          <pre><code class="python" data-trim>
-            letters = ['a', 'b', 'c', 'd', 'e', 'f']
-            letters[1:3] # results in ['b', 'c']
-            letters[2:3] # results in ['c']
-          </code></pre>
+          <div class="fragment">
+            <br>
+            Or just take slices of a list:
+            <pre><code class="python" data-trim>
+              letters = ['a', 'b', 'c', 'd', 'e', 'f']
+              letters[1:3] # results in ['b', 'c']
+              letters[2:3] # results in ['c']
+            </code></pre>
+          </div>
         </section>
 
-        <section id="fragments">
+        <section>
           <h3>Exercises</h3>
           <small>
           Using while loops and lists, write programs that can:
-
-          <div>
           <ol>
+            <li>
+              (⭐️⭐️) 4b. Program Bob (version 2)!
+              <br>
+              Get Bob to say '...sup' in response to 'hi', 'hello', 'hey' or 'howdy'.
+              <br><br>
+            </li>
 
             <pre><code class="python" data-trim>
-            random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
+              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
             </code></pre>
-            <li> (⭐️)Use the solution to the previous exercise (sum of all numbers) to find the average value of the list. </li>
-            <br>
-            <li> (⭐️⭐️)Using the list above, find the largest number and print it.</li>
-            <li> (⭐️⭐️)Using the list above, filter out only the negative numbers, create a list with them and print it.</li>
-            <li>(⭐️⭐️⭐️) From a list of numbers, find the largest possible sum of two of them.</li>
-            <li>(⭐️⭐️⭐️) Print a Christmas tree, as described 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_4/xmas_trees.py" target="_blank">
+
+            <li>
+              (⭐️⭐️) 4c. Using the list above, find the largest number.
+              <br><br>
+            </li>
+            <li>
+              (⭐️⭐️) 4d. Using the list above, create a new list containing only the negative numbers.
+              <br><br>
+            </li>
+            <li>
+              (⭐️⭐️⭐️) 4e. Get Bob to continually talk to you until you say 'bye'.
+              <br><br>
+            </li>
+            <li>
+              (⭐️⭐️⭐️) 4f. Using the list above, find the largest product (multiplication) of any 2 numbers.
+              <br>
+              Make sure your solution works when all the numbers are negative!
+              <br><br>
+            </li>
+            <li>
+              (⭐️⭐️⭐️) 4g. Print a Christmas tree, as described 
+              <a href="https://github.com/python101ldn/exercises/blob/master/Session_4/4g_xmas_trees.py" target="_blank">
                 here
               </a>
             </li>
-          </ol><br><br>
-          </small>
-
+          </ol>
+          </small
           
         </section>
 
