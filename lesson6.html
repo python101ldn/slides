@@ -104,6 +104,25 @@
         </section>
 
         <section>
+          <h3>Dictionary exercise</h3>
+
+          (⭐️⭐️) 6a. Let's go shopping!
+          <pre><code class="python" data-trim>
+              inventory = {'apples': 3, 'pears': 2, 'bananas': 0}
+          </code></pre>
+          <br>
+          The program should:
+          <ol>
+            <li>
+              Ask what the shopper would like to buy, and take user input.
+            </li>
+            <li>
+              Minus 1 of that item from that inventory and print the new inventory.
+            </li>
+          </ol>
+        </section>
+
+        <section>
           <h3>Dictionary methods</h3>
 
           We can get lists of all keys or all values.
@@ -112,8 +131,10 @@
               <pre><code class="python" data-trim>
                 inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
-                print(inventory.keys()) # will print ['apples', 'pears', 'bananas']
-                print(inventory.values()) # will print [320, 228, 420]
+                print(inventory.keys())
+                # will print ['apples', 'pears', 'bananas']
+                print(inventory.values())
+                # will print [320, 228, 420]
               </code></pre>
             </div>
           </p>
@@ -138,31 +159,43 @@
         <section>
           <h3>Dictionary exercises</h3>
           <small>
-          <ol>
-            <li>
-              (⭐️⭐️)
-              Start with an empty dictionary. Use loops to add the numbers between 1 and 15 as keys and their square as values. The expected output is: <br> {1: 1, 2: 4, 3: 9, ....}<br><br>
-            </li>
-
-            <li> (⭐️⭐️) Write a program that tracks the count of the letters from a string.<br>
-              Given the string - "expedia" the expected output is:<br>
-              {'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}
-            </li><br>
-
-            <li>
-             (⭐️⭐️⭐️🔥) There are 36 possible scenarios when throwing a pair of dice.<br>
-             The possible sums are between 2 and 12.<br>
-
-             Write a program that creates a dictionary where the keys are the possible sums and the values are how many dice combinations can make that sum.<br>
-
-             For instance, the sum 2 can be achieved in one way only - the two dice have value 1.<br>
-             The sum 3 can be achieved in 2 ways - with dice combinations (1, 2) and (2, 1).<br>
-             The example output would be: {2: 1, 3: 2, 4: 3, ...}
-            </li>
-            
-          </ol>
-        </small>
-
+            <ul>
+              <li> (⭐️⭐️) 6b. Write a program that tracks the count of the letters from a string.
+                <br><br>
+                Given the string <span id="code">'expedia'</span> the expected output is:
+                <br>
+                <span id="code">{'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}</span>
+              </li>
+              <br>
+              <li>
+                (⭐️⭐️⭐️) 6c. Add the following functionality to your shopping program:
+                <ul>
+                  <li>
+                    i. If that item doesn't exist, let the user know.
+                  </li>
+                  <li>
+                    ii. If that item is sold out, let the user know.
+                  </li>
+                  <li>
+                    iii. Also ask the user for how many items they'd like to buy. Hint: you'll need
+                    <pre><code class="python" data-trim>
+                      how_many = input('How many items would you like to buy?')
+                      how_many = int(how_many)  # convert string to number (int = integer)
+                    </code></pre>
+                  </li>
+                </ul>
+              </li>
+              <br>
+              <li>
+                (⭐️⭐️⭐️🔥) 6d. Calculate all possible dice combinations! See 
+                <a href="https://github.com/python101ldn/exercises/blob/master/Session_6/6d_dice_sums.py" target="_blank">
+                  here 
+                </a>
+                for a description.
+              </li>
+              
+            </ul>
+          </small>
         </section>
 
       </div>
