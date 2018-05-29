@@ -41,20 +41,30 @@
         <section>
           <h3>Looping</h3>
           <p>
-            Since lists contain lots of items, we can use <span id="code">while</span> to loop through them
+            We can use <span id="code">while</span> to loop through lists
 
             <div class="fragment">
               <pre><code class="python" data-trim>
-                sentence = ['Programming', 'in', 'Python', 'is', 'great!']
-
-                formatted = ''  # an empty string
-                position = 0
+                words = ['Programming', 'in', 'Python', 'is', 'great!']
+                sentence = ''  # an empty string
+                index = 0
                 
-                while position < len(sentence):
-                    formatted = formatted + ' ' + sentence[position]
-                    position = position + 1
+                while index < len(words):
+                    sentence = sentence + ' ' + words[index]
+                    index = index + 1
+              </code></pre>
+            </div>
+          </p>
+          <p class="fragment">
+            However, it's a pain to keep track of the list position! This is what <span id="code">for</span> loops do:
 
-                print(formatted)
+            <div class="fragment">
+              <pre><code class="python" data-trim>
+                words = ['Programming', 'in', 'Python', 'is', 'great!']
+                sentence = ''  # an empty string
+                
+                for word in words:
+                    sentence = sentence + ' ' + word
               </code></pre>
             </div>
           </p>
@@ -62,49 +72,25 @@
 
         <section>
           <h3>For loops</h3>
-          <p>
-            However, it's a pain to keep track of the list position!<br><br>
-            This is what <span id="code">for</span> loops do:
-
+            <p>
+              The <span id="code">word</span> variable is recreated every round of the loop, with the value of the next item in the list.
+              <br><br>
+            </p>
+            <p class="fragment">
+              You can name it anything you like! Just use the same variable name within the for loop.
+              <br><br>
+            </p>
             <div class="fragment">
               <pre><code class="python" data-trim>
-                some_numbers = [0, 28374, 39, 4]
+                expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+                
+                for brand in expedia_brands:
+                    print('I love ' + brand)
 
-                total = 0
-
-                for number in some_numbers:
-                    total = total + number
-
-                print(total)
+                for scoobydoo in expedia_brands:  # same as the above for loop
+                    print('I love ' + scoobydoo)
               </code></pre>
             </div>
-
-            <div class="fragment">
-              The <span id="code">number</span> variable is recreated every round of the loop, with the value of the next item in the list
-            </div>
-          </p>
-        </section>
-
-        <section>
-          <h3>While or for loops?</h3>
-          <p>
-            While loops are useful when you want something to loop forever, or <u>until</u> something changes!
-            <br><br>
-          </p>
-          <p class="fragment">
-            For loops are useful when you <u>have your data already</u> and want to loop through it until it ends.
-            <br><br>
-          </p>
-          <p class="fragment">
-            <b>What about these examples?</b>
-            <small>
-              <ul>
-                <li class="fragment">You've read a file into a list of lines (as strings), and want to print each line.</li>
-                <li class="fragment">You want to ask for user input() until they type the string 'EXIT'.</li>
-                <li class="fragment">You want to process a list of numbers until you encounter a negative number</li>
-              </ul>
-            </small>
-          </p>
         </section>
 
         <section>
@@ -122,7 +108,7 @@
 
           <div class="fragment">
             <p>
-              That's right, strings are simply lists of characters! You can write code such as:<br>
+              Strings are simply lists of characters!<br>
               <pre><code class="python" data-trim>
                 total = 0
                 my_string = 'Today is a great day!'
@@ -131,9 +117,31 @@
                     ??? 
               </code></pre>
 
-              Let's count the number of occurrences of the letter 'a'!
+              (⭐️) 5a. Count the number of 'a's in my_string.
             </p>
           </div>
+        </section>
+
+        <section>
+          <h3>While or for loops?</h3>
+          <p>
+            While loops are useful when you want something to loop forever, or <u>until</u> something changes!
+            <br><br>
+          </p>
+          <p class="fragment">
+            For loops are useful when you <u>have your data already</u> and want to loop through it until it ends.
+            <br><br>
+          </p>
+          <p class="fragment">
+            <b>What about these examples?</b>
+            <small>
+              <ul>
+                <li class="fragment">You want to ask for user input() until they type the string 'EXIT'.</li>
+                <li class="fragment">You have a list of exam marks, and want to see how many are above a pass mark.</li>
+                <li class="fragment">You want to process a list of numbers until you encounter a negative number</li>
+              </ul>
+            </small>
+          </p>
         </section>
 
         <section>
@@ -143,32 +151,35 @@
             </code></pre>
 
           <small>
-          <ol>
+          <ul>
             <li>
-              (⭐) Using a for loop and <span id="code">some_numbers</span>, multiply each element of the list by 10 and print it.<br><br>
+              (⭐) 5b. Using a for loop and <span id="code">some_numbers</span>, print each element multiplied by 10.
+              <br>
+              Example output: 15.0, 372.0, 550, -19.4
+              <br><br>
             </li>
             <li>
-              (⭐⭐) Count how many words in a given list are longer than 3 letters. See 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_5/letter_counter.py" target="_blank">
+              (⭐⭐) 5c. Count how many words in a given list are longer than 3 letters. See 
+              <a href="https://github.com/python101ldn/exercises/blob/master/Session_5/5c_letter_counter.py" target="_blank">
                 here
               </a>
               for a list of words to use.
               </a>
             </li><br>
             <li>
-              (⭐⭐⭐) Count the number of vowels in a string provided by the user using <span id="code">input()</span>.
+              (⭐⭐⭐) 5d. Count the number of vowels in a string provided by the user using <span id="code">input()</span>.
               <br><br>
               Example: given input "hello", the program will output 2
             </li><br>
             <li>
-              (⭐⭐⭐) Use nested <span id="code">for</span> loops to print the 2, then 3, then 4 multiplication tables. See 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_5/nested_for.py" target="_blank">
+              (⭐⭐⭐) 5e. Use nested <span id="code">for</span> loops to print the 2, then 3, then 4 multiplication tables. See 
+              <a href="https://github.com/python101ldn/exercises/blob/master/Session_5/5e_nested_for.py" target="_blank">
                 here
               </a>
               for example output.<br><br>
               Hint: <span id="code">range(2, 5)</span> creates the list [2, 3, 4]
             </li>
-          </ol>
+          </ul>
         </small>
         </section>
 
