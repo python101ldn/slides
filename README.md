@@ -1,5 +1,5 @@
 # python101ldn
-Course content for python course
+Content for beginners' python course
 
 ## For students
 - To view the slideshows, please see the links on the [Python 101 website](https://python101ldn.github.io)
