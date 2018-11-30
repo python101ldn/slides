@@ -47,14 +47,14 @@
             <br><br>
           </p>
           <pre class="fragment"><code class="python" data-trim>
-              # a list of strings
-              expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-              # a list of numbers
-              exam_grades = [40, 55, 99, 73]
-              # a list containing mixed types
-              a_bit_of_everything = ['hello!', 2, True, 0.535]
-              # a list of lists
-              words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
+            # a list of strings
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            # a list of numbers
+            exam_grades = [40, 55, 99, 73]
+            # a list containing mixed types
+            a_bit_of_everything = ['hello!', 2, True, 0.535]
+            # a list of lists
+            words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
           </code></pre>
         </section>
 
@@ -101,9 +101,9 @@
 
           <div class="fragment">
             <pre><code class="python" data-trim>
-              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
+              random_numbers = [31, 5.36, 0, 25, 535, 42.3]
             </code></pre>
-            (⭐️) 3a. Write a program to add all the numbers in the list above together, and then print the result.
+            (⭐⭐️) 3a. Write a program to find the average (hint: add all the numbers together then divide by how many numbers there are)
             <br><br>
           </div>
 
@@ -159,6 +159,13 @@
             if 'Hotels.com' in expedia_brands:
               print('Yay!')
           </code></pre>
+          (⭐️⭐️) 3b. Program Bob (version 2)!
+          <br>
+          Get Bob to say '...sup' in response to 'hi', 'hello', 'hey' or 'howdy'. See 
+          <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/bob_solution.py" target="_blank">
+            here 
+          </a>
+          for the solution to the original Bob exercise.
         </section>
 
         <section>
@@ -173,7 +180,7 @@
 
           <div class="fragment">
             <br>
-            Or just take slices of a list:
+            Or take sections (called slices) of a list:
             <pre><code class="python" data-trim>
               letters = ['a', 'b', 'c', 'd', 'e', 'f']
               letters[1:3] # results in ['b', 'c']
@@ -182,26 +189,7 @@
           </div>
         </section>
 
-        <section>
-          <h3>Exercises</h3>
-          <small>
-          Using while loops and lists, write programs that can:
-          <ul>
-            <li>
-              (⭐️⭐️) 3b. Program Bob (version 2)!
-              <br>
-              Get Bob to say '...sup' in response to 'hi', 'hello', 'hey' or 'howdy'. See 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/bob_solution.py" target="_blank">
-                here 
-              </a>
-              for the solution to the original Bob exercise.
-              <br><br>
-            </li>
-          </ul>
-          </small
-          
-        </section>
-
+        <!-- TODO: more exercises? or maybe more content e.g. functions or input? -->
       </div>
     </div>
 
@@ -219,10 +207,10 @@
           { src: 'reveal/plugin/notes/notes.js', async: true },
           { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ],
-                history: true,
-          progress: false,
-                center: false, // disable vertical centering of text
-                transition: 'none'
+        history: true,
+        progress: false,
+        center: false, // disable vertical centering of text
+        transition: 'none'
       });
     </script>
   </body>
