@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 4 - Lists</title>
+    <title>Lesson 4 - Loops</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -30,7 +30,7 @@
         <section> 
           <br>
           <h2>Python 101</h2>
-          <h3>Lesson 4:<br>Lists</h3>
+          <h3>Lesson 4:<br>Loops</h3>
           <p>
             <small>Expedia Code Academy</small>
             <br>
@@ -39,196 +39,158 @@
         </section>
 
         <section>
-          <h3>Lists</h3>
-          <p class="fragment">
-            A list is an ordered set of values, where each value is identified by an index (its position in the list).
-            <br><br>
-            Each of those values is called an element of the list.
-            <br><br>
-          </p>
-          <pre class="fragment"><code class="python" data-trim>
-              # a list of strings
-              expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-              # a list of numbers
-              exam_grades = [40, 55, 99, 73]
-              # a list containing mixed types
-              a_bit_of_everything = ['hello!', 2, True, 0.535]
-              # a list of lists
-              words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
-          </code></pre>
+          <h3>Getting our code to do more</h3>
+          <p>How would we write code to print all numbers between 10 and 0?<br></p>
+          <p class="fragment">What about 100? Or 1000?</p>
+          <div class="fragment">
+            By using loops, we can make python evaluate code more than once<br>
+            <pre><code class="python" data-trim>
+              number = 10
+              
+              while number > 0: 
+                  print(number)
+                  number = number - 1
+              
+              print("Blast Off!")
+            </code></pre>
+          </div>
         </section>
 
         <section>
-          <h3>Lists</h3>
+          <h3>While loops</h3>
+          While loops are like <span id="code">if</span> statements,<br>
+          except they keep looping through their block of code until
+          the Boolean is <span id="code">False</span>
+          <br><br>
+          <div class="fragment">
+            What will this code do?
+            <pre><code class="python" data-trim>
+              number = 10
+              
+              while number > 0: 
+                  print(number)
+                  #  number = number - 1
+              
+              print("Blast Off!")
+            </code></pre>
+            (⭐️) 4a. print numbers <em>up</em> to 10 (including 0 and 10)
+        </section>
+
+        <section>
+          <h3>Accepting user input</h3>
+          <p><small>
+            <br>
+            What if we could provide data while our code is running?
+            <br><br>
+            <span id="code">input</span> pauses the program until the user types something and presses Enter.
+            <br><br>
+            We can then use what the user typed as a variable in the code!
+            <br><br>
+          </small></p>
+
           <pre><code class="python" data-trim>
-              # a list of strings
-              expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-              # a list of numbers
-              exam_grades = [40, 55, 99, 73]
+            users_name = input('What is your name? ')
+            print('Hello, ' + users_name + '!')
           </code></pre>
+          (⭐⭐️) 4b. Get the above code to run in a while loop until the user enters 'EXIT'
+        </section>
 
-          <div class="fragment">
-              You can pick out items from a list by using their index.<br>
-              The index starts from 0!
-          </div>
-
-          <div class="fragment">
+        <section>
+          <h3>For loops</h3>
+            <p>
+              For loops are a way to loop (or "iterate") through a list.
+              The <span id="code">word</span> variable is recreated every round of the loop, with the value of the next item in the list.
+              <br><br>
+            </p>
+            <p class="fragment">
+              You can name it anything you like! Just use the same variable name within the for loop.
+              <br><br>
+            </p>
+            <div class="fragment">
               <pre><code class="python" data-trim>
-                print(expedia_brands[0])  # 'Hotels.com'
-                print(expedia_brands[2])  # 'Expedia'
+                expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+                
+                for brand in expedia_brands:
+                    print('I love ' + brand)
 
-                print(exam_grades[0])  # 40
-                print(exam_grades[-1])  # 73
-                print(exam_grades[-2])  # 99
-              </code></pre><br>
-          </div>
-
+                for scoobydoo in expedia_brands:  # same as the above for loop
+                    print('I love ' + scoobydoo)
+              </code></pre>
+            </div>
         </section>
 
         <section>
-          <h3>Lists exercise</h3>
-
-          It is useful to know the number of items in a list too:
-          <pre><code class="python" data-trim>
-            # Create a list
-            sentence = ['Programming', 'is', 'really', 'fun']
-            
-            length = len(sentence)
-            print(length) # 4
-          </code></pre>
-
+          <h3>Strings can be treated like lists</h3>
+          <div>
+            <p>
+            What do we think this code will do?<br>
+            </p>
+            <pre><code class="python" data-trim>
+              my_string = 'Today is a great day!'
+              print(my_string[0])
+            </code></pre>
+          </div>
           <br>
 
           <div class="fragment">
-            <pre><code class="python" data-trim>
-              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
-            </code></pre>
-            (⭐️) 4a. Write a program to add all the numbers in the list above together, and then print the result.
-            <br><br>
-          </div>
+            <p>
+              Strings are simply lists of characters!<br>
+              <pre><code class="python" data-trim>
+                total = 0
+                my_string = 'Today is a great day!'
+                
+                for letter in my_string:
+                    ??? 
+              </code></pre>
 
+              (⭐️) 4c. Count the number of 'a's in my_string.
+            </p>
+          </div>
         </section>
 
         <section>
-          <h3>Why use lists?</h3>
+          <h3>While or for loops?</h3>
           <p>
-            <br>
-            A list acts as a single variable to store lots of data.
+            While loops are useful when you want something to loop forever, or <u>until</u> something changes!
             <br><br>
-            Here are some basic list tricks:
-
-            <pre><code class="python" data-trim>
-              # Start with an empty list
-              sentence = ['Programming', 'is']
-              # Add an item to the end
-              sentence.append('fun')
-
-              print(sentence)
-            </code></pre>
           </p>
-        </section>
-
-        <section>
-          <h3>Why use lists?</h3>
-          <br>
-          We can concatenate two lists together.
-
-          <pre><code class="python" data-trim>
-            # Create two lists
-            sentence_start = ['Programming', 'is']
-            sentence_end = ['really', 'fun']
-            
-            # Join the two lists together using the + operator
-            sentence = sentence_start + sentence_end
-            print(sentence)
-          </code></pre>
-
-        </section>
-
-        <section>
-          <h3>Why use lists?</h3>
-          <br>
-          Sometimes it's useful to find if an element exists in a given list.
-
-          <pre><code class="python" data-trim>
-            expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
-
-            if 'Booking.com' in expedia_brands:
-              print('Something must be wrong!')
-
-            if 'Hotels.com' in expedia_brands:
-              print('Yay!')
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Why use lists?</h3>
-
-          We can sort lists:
-          <pre class="fragment"><code class="python" data-trim>
-            random_numbers = [5, 3, 4, 6, 1, 2]
-            sorted_numbers = sorted(random_numbers)
-            print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
-          </code></pre>
-
-          <div class="fragment">
-            <br>
-            Or just take slices of a list:
-            <pre><code class="python" data-trim>
-              letters = ['a', 'b', 'c', 'd', 'e', 'f']
-              letters[1:3] # results in ['b', 'c']
-              letters[2:3] # results in ['c']
-            </code></pre>
-          </div>
+          <p class="fragment">
+            For loops are useful when you <u>have your data already</u> and want to loop through it until it ends.
+            <br><br>
+          </p>
+          <p class="fragment">
+            <b>What about these examples?</b>
+            <small>
+              <ul>
+                <li class="fragment">You want to ask for user input() until they type the string 'EXIT'.</li>
+                <li class="fragment">You have a list of exam marks, and want to see how many are above a pass mark.</li>
+                <li class="fragment">You want to process a list of numbers until you encounter a negative number</li>
+              </ul>
+            </small>
+          </p>
         </section>
 
         <section>
           <h3>Exercises</h3>
-          <small>
-          Using while loops and lists, write programs that can:
+          <pre><code class="python" data-trim>
+            some_numbers = [1.5, 37.2, 55, -1.94]
+          </code></pre>
           <ul>
             <li>
-              (⭐️⭐️) 4b. Program Bob (version 2)!
+              (⭐) 4d. Using <span id="code">some_numbers</span>, print each element multiplied by 10.
               <br>
-              Get Bob to say '...sup' in response to 'hi', 'hello', 'hey' or 'howdy'. See 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/bob_solution.py" target="_blank">
-                here 
-              </a>
-              for the solution to the original Bob exercise.
-              <br><br>
-            </li>
-
-            <pre><code class="python" data-trim>
-              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
-            </code></pre>
-
-            <li>
-              (⭐️⭐️) 4c. Using the list above, find the largest number.
+              Example output: 15.0, 372.0, 550, -19.4
               <br><br>
             </li>
             <li>
-              (⭐️⭐️) 4d. Using the list above, create a new list containing only the negative numbers.
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️⭐️) 4e. Use a while loop to get Bob to continually talk to you until you say 'bye'.
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️⭐️) 4f. Using the list above, find the largest product (multiplication) of any 2 numbers.
-              <br>
-              Make sure your solution works when all the numbers are negative!
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️⭐️) 4g. Print a Christmas tree, as described 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_4/4g_xmas_trees.py" target="_blank">
+              (⭐⭐) 4e. Count how many words in a given list are longer than 3 letters. See 
+              <a href="https://github.com/python101ldn/exercises/blob/master/Session_5/5c_letter_counter.py" target="_blank">
                 here
               </a>
-            </li>
+              for a list of words to use.
+              </a>
+            </li><br>
           </ul>
-          </small
-          
         </section>
 
       </div>
@@ -248,10 +210,10 @@
           { src: 'reveal/plugin/notes/notes.js', async: true },
           { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ],
-                history: true,
-          progress: false,
-                center: false, // disable vertical centering of text
-                transition: 'none'
+        history: true,
+        progress: false,
+        center: false, // disable vertical centering of text
+        transition: 'none'
       });
     </script>
   </body>
