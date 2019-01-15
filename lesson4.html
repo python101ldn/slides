@@ -78,15 +78,13 @@
 
         <section>
           <h3>Accepting user input</h3>
-          <p><small>
-            <br>
             What if we could provide data while our code is running?
-            <br><br>
-            <span id="code">input</span> pauses the program until the user types something and presses Enter.
-            <br><br>
-            We can then use what the user typed as a variable in the code!
-            <br><br>
-          </small></p>
+            <p class="fragment">
+              The <span id="code">input</span> function pauses the program until the user types something and presses Enter.
+            </p>
+            <p class="fragment">
+              We can then use what the user typed as a variable in the code!
+            </p>
 
           <pre><code class="python" data-trim>
             users_name = input('What is your name? ')
@@ -97,26 +95,21 @@
 
         <section>
           <h3>For loops</h3>
-            <p>
-              For loops are a way to loop (or "iterate") through a list.
-              The <span id="code">word</span> variable is recreated every round of the loop, with the value of the next item in the list.
-              <br><br>
-            </p>
-            <p class="fragment">
-              You can name it anything you like! Just use the same variable name within the for loop.
-              <br><br>
-            </p>
-            <div class="fragment">
-              <pre><code class="python" data-trim>
-                expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-                
-                for brand in expedia_brands:
-                    print('I love ' + brand)
+          For loops are a way to loop (or "iterate") through a list.
+          <pre><code class="python" data-trim>
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            
+            for brand in expedia_brands:
+                print('I love ' + brand)
 
-                for scoobydoo in expedia_brands:  # same as the above for loop
-                    print('I love ' + scoobydoo)
-              </code></pre>
-            </div>
+            for scoobydoo in expedia_brands:  # same as the above for loop
+                print('I love ' + scoobydoo)
+          </code></pre>
+          <p class="fragment">
+            The <span id="code">word</span> variable is recreated every round of the loop, with the value of the next item in the list.
+            <br>
+            You can name it anything you like! Just use the same variable name within the for loop.
+          </p>
         </section>
 
         <section>
