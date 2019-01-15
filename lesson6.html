@@ -47,12 +47,13 @@
 
             <div class="fragment">
               <pre><code class="python" data-trim>
-                eng_to_sp = {} # create an empty dictionary
+                eng_dict = {} # let's create an English dictionary
 
-                eng_to_sp['one'] = 'uno' # add information to it
-                eng_to_sp['two'] = 'dos'
+                # then add words to it
+                eng_dict['hotel'] = 'An establishment providing accommodation.' 
+                eng_dict['flight'] = 'The process of flying through the air.'
 
-                print(eng_to_sp)
+                print(eng_dict)
               </code></pre>
             </div>
           </p>
@@ -67,10 +68,11 @@
 
             <div class="fragment">
               <pre><code class="python" data-trim>
-                # We can define the dictionary in one line too
-                eng_to_sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+                # We can define a dictionary in one line too
+                eng_dict = {'hotel': 'An establishment providing accommodation.',
+                 'flight': 'The process of flying through the air.'}
 
-                print(eng_to_sp['one']) # to print a value from the dictionary
+                print(eng_dict['hotel']) # to print a value from the dictionary
               </code></pre>
             </div>
           </p>
@@ -79,7 +81,7 @@
         <section>
           <h3>Dictionary operations</h3>
 
-          We can change the value for a given key or delete key-value pairs!
+          We can also modify existing dictionaries - change the value for a given key or delete key-value pairs!
           <p>
             <div class="fragment">
               <pre><code class="python" data-trim>
@@ -106,22 +108,31 @@
         <section>
           <h3>Dictionary exercise</h3>
 
-          (⭐️⭐️) 6a. Let's go shopping!
+          (⭐️⭐️) 6a. Let's access data in a dictionary!
           <pre><code class="python" data-trim>
-              inventory = {'apples': 3, 'pears': 2, 'bananas': 0}
+            hotel = {
+                'name': 'Corinthia Hotel',
+                'amenities': ['Indoor pool', 'Fitness centre', 'Spa'],
+                'top spots': [
+                    {'name': 'Trafalgar Square',
+                     'proximity': 300},
+                    {'name': 'London Eye',
+                     'proximity': 450},
+                    {'name': 'Buckingham Palace',
+                     'proximity': 1200}
+                 ]
+            }
           </code></pre>
-          <br>
-          The program should:
-          <ol>
-            <li>
-              Ask what the shopper would like to buy, and take user input.
-            </li>
-            <li>
-              Minus 1 of that item from that inventory and print the new inventory.
-              <br>
-              Assume that the user will type 'apples', 'pears' or 'bananas'!
-            </li>
-          </ol>
+                    
+          <small>
+            How can you:<br>
+            <ul>
+              <li>Access the hotel name?</li>
+              <li>Find out how many amenities it has?</li>
+              <li>Find out the names of the top spots near it?</li>
+              <li>Find out all the top spots within 500 metres reach?</li>
+            </ul>
+          </small>
         </section>
 
         <section>
@@ -159,11 +170,31 @@
         </section>
 
         <section>
-          <h3>Dictionary exercises</h3>
+          <h3>Dictionary exercises</h3>          
+          <pre><code class="python" data-trim>
+              inventory = {'apples': 3, 'pears': 2, 'bananas': 0}
+          </code></pre>
           <small>
             <ul>
               <li>
-                (⭐️⭐️⭐️) 6b. Add the following functionality to your shopping program:
+                (⭐️⭐️) 6b. Let's go shopping! For this exercise use the following dictionary:
+              </li>
+              <ul>
+                <li>
+                  The program should handle the following scenario:
+                </li>
+                <li>
+                  A shopper would like to buy 1 item. Take user input of what that item is.
+                  <br>
+                  Assume that the user will type 'apples', 'pears' or 'bananas'!
+                </li>
+                <li>
+                  Update the inventory to reflect that purchase - i.e. if someone buys apples, their value would go from 3 to 2.
+                </li>
+              </ul>
+              </li>
+              <li>
+                (⭐️⭐️⭐️) 6c. Add the following functionality to your shopping program:
                 <ul>
                   <li>
                     i. If that item doesn't exist, let the user know.
@@ -181,26 +212,30 @@
                 </ul>
               </li>
               <br>
+            </ul>
+          </small>
+        </section>
 
-
-              <li>(⭐️️️⭐️️️⭐️) 6c. Write a program that tracks the count of the letters from a string.
+        <section> 
+          <h3>Dictionary creation exercises</h3>          
+          <ul>
+          <li>(⭐️️️⭐️️️⭐️) 6d. Write a program that tracks the count of the letters from a string.
                 <br><br>
                 Given the string <span id="code">'expedia'</span> the expected output is:
                 <br>
-                <span id="code">{'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}</span>
+                <pre><code class="python" data-trim>
+                      {'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}
+                </code></pre>
               </li>
-              <br>
-              
+              <br>              
               <li>
-                (⭐️⭐️⭐️🔥) 6d. Calculate all possible dice combinations! See 
+                (⭐️⭐️⭐️🔥) 6e. Calculate all possible dice combinations! See 
                 <a href="https://github.com/python101ldn/exercises/blob/master/Session_6/6d_dice_sums.py" target="_blank">
                   here 
                 </a>
                 for a description.
               </li>
-              
             </ul>
-          </small>
         </section>
 
       </div>
