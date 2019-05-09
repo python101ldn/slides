@@ -176,13 +176,10 @@
         </section>
 
         <section>
-          <h3>Magic number trick (⭐)</h3>
+          <h3>(⭐) 1a. Magic number trick</h3>
           <p>
             This is a small exercise to practice creating and changing variables<br><br>
-            For a solution, please see 
-            <a href="https://github.com/python101ldn/exercises/blob/master/Session_1/magic_number_solution.py" target="_blank">
-              here
-            </a>
+            If you'd like to see the variables visualised, try <a href="http://pythontutor.com/live.html#mode=edit" target="_blank">this website!</a>
             <small>
             <ul>
               <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
@@ -194,6 +191,7 @@
               <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
             </ul>
           </small>
+          </p>
         </section>
 
         <section>
@@ -232,6 +230,25 @@
             greeting = 'Welcome to Hogwarts,'
             print(greeting, first, last)
           </code></pre><br>
+        </section>
+
+        <section>
+          <h3>Accepting user input</h3>
+          What if we could provide data while our code is running?
+          <p class="fragment">
+            The <span id="code">input</span> function pauses the program until the user types something and presses Enter.
+          </p>
+          <p class="fragment">
+            We can then use what the user typed as a variable in the code!
+          </p>
+
+          <div class="fragment">
+            <pre><code class="python" data-trim>
+              users_name = input('What is your name? ')
+              print('Hello, ' + users_name + '!')
+            </code></pre>
+            (⭐⭐️) 1b. Ask the user to enter their first and last names, then welcome them to Hogwarts!
+          </div>
         </section>
       </div>
     </div>
