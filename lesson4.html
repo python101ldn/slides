@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 4 - Loops</title>
+    <title>Week 4 - Loops</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -30,69 +30,12 @@
         <section> 
           <br>
           <h2>Python 101</h2>
-          <h3>Lesson 4:<br>Loops</h3>
+          <h3>Week 4:<br>Loops</h3>
           <p>
             <small>Expedia Code Academy</small>
             <br>
             <img src="static/img/code_academy_logo.png" border="0px">
           </p>
-        </section>
-
-        <section>
-          <h3>Getting our code to do more</h3>
-          <p>How would we write code to print all numbers between 10 and 0?<br></p>
-          <p class="fragment">What about 100? Or 1000?</p>
-          <div class="fragment">
-            By using loops, we can make python evaluate code more than once<br>
-            <pre><code class="python" data-trim>
-              number = 10
-              
-              while number > 0: 
-                  print(number)
-                  number = number - 1
-              
-              print("Blast Off!")
-            </code></pre>
-          </div>
-        </section>
-
-        <section>
-          <h3>While loops</h3>
-          While loops are like <span id="code">if</span> statements,<br>
-          except they keep looping through their block of code until
-          the Boolean is <span id="code">False</span>
-          <br><br>
-          <div class="fragment">
-            What will this code do?
-            <pre><code class="python" data-trim>
-              number = 10
-              
-              while number > 0: 
-                  print(number)
-                  #  number = number - 1
-              
-              print("Blast Off!")
-            </code></pre>
-            (⭐️) 4a. print numbers <em>up</em> to 10 (including 0 and 10)
-        </section>
-
-        <section>
-          <h3>Accepting user input</h3>
-          What if we could provide data while our code is running?
-          <p class="fragment">
-            The <span id="code">input</span> function pauses the program until the user types something and presses Enter.
-          </p>
-          <p class="fragment">
-            We can then use what the user typed as a variable in the code!
-          </p>
-
-          <div class="fragment">
-            <pre><code class="python" data-trim>
-              users_name = input('What is your name? ')
-              print('Hello, ' + users_name + '!')
-            </code></pre>
-            (⭐⭐️) 4b. Get the above code to run in a while loop until the user enters 'EXIT'
-          </div>
         </section>
 
         <section>
