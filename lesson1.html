@@ -137,23 +137,24 @@
               <li>Division e.g.  <span id="code">400 / 3</span></li>
         </section>
 
-        <section>	
-	        <h3>Functions</h3>
-	        <div>
-	        <p>
-           A function is a shortcut for code that you can use to perform an action without having to write the steps every time<br><br>
-	         For example, you can use the function max() to find the highest number in a group<br></p>
-	         <pre><code class="python" data-trim>
-	         my_number = max(4,6,10)
-	         print(my_number)
-	         </code></pre>
-	        </div>
-	        <div class="fragment">
-	        <p>
-          Usually, a function needs certain information to do its work. These values, often called arguments, are input by the user<br><br>
-	        Python has several inbuilt functions for common tasks that you can use immediately. Later in the course you'll see how to create your own as well!<br></p>
-	        </div>
-	      </section>          
+        <section>
+          <h3>(⭐) 1a. Magic number trick</h3>
+          <p>
+            This is a small exercise to practice creating and changing variables<br><br>
+            If you'd like to see the variables visualised, try <a href="http://pythontutor.com/live.html#mode=edit" target="_blank">this website!</a>
+            <small>
+            <ul>
+              <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
+              <li class="fragment">Create a variable called <span id="code" style="color:blue;">step_1</span>, and make it <span id="code" style="color:red;">start_number</span> multiplied by 2</li>
+              <li class="fragment">Create a variable called <span id="code" style="color:orange;">step_2</span>, and add 9 to <span id="code" style="color:blue;">step_1</span></li>
+              <li class="fragment">Create a variable called <span id="code" style="color:green;">step_3</span>, and subtract 3 from <span id="code" style="color:orange;">step_2</span></li>
+              <li class="fragment">Create a variable called <span id="code" style="color:purple;">step_4</span>, and divide <span id="code" style="color:green;">step_3</span> by 2</li>
+              <li class="fragment">Create a variable called <span id="code" style="color:magenta;">result</span>, and subtract <span id="code" style="color:red;">start_number</span> from <span id="code" style="color:purple;">step_4</span></li>
+              <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
+            </ul>
+          </small>
+          </p>
+        </section>
           
         <section>
           <h3>How does Python work?</h3>
@@ -175,23 +176,23 @@
           </p>
         </section>
 
-        <section>
-          <h3>(⭐) 1a. Magic number trick</h3>
-          <p>
-            This is a small exercise to practice creating and changing variables<br><br>
-            If you'd like to see the variables visualised, try <a href="http://pythontutor.com/live.html#mode=edit" target="_blank">this website!</a>
-            <small>
-            <ul>
-              <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
-              <li class="fragment">Create a variable called <span id="code" style="color:blue;">step_1</span>, and make it <span id="code" style="color:red;">start_number</span> multiplied by 2</li>
-              <li class="fragment">Create a variable called <span id="code" style="color:orange;">step_2</span>, and add 9 to <span id="code" style="color:blue;">step_1</span></li>
-              <li class="fragment">Create a variable called <span id="code" style="color:green;">step_3</span>, and subtract 3 from <span id="code" style="color:orange;">step_2</span></li>
-              <li class="fragment">Create a variable called <span id="code" style="color:purple;">step_4</span>, and divide <span id="code" style="color:green;">step_3</span> by 2</li>
-              <li class="fragment">Create a variable called <span id="code" style="color:magenta;">result</span>, and subtract <span id="code" style="color:red;">start_number</span> from <span id="code" style="color:purple;">step_4</span></li>
-              <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
-            </ul>
-          </small>
-          </p>
+        <section> 
+          <h3>Functions</h3>
+          <div>
+            <p>
+             A function is a shortcut for code that you can use to perform an action without having to write the steps every time<br><br>
+             For example, you can use the function max() to find the highest number in a group<br></p>
+               <pre><code class="python" data-trim>
+               my_number = max(4,6,10)
+               print(my_number)
+               </code></pre>
+          </div>
+          <div class="fragment">
+            <p>
+            Usually, a function needs certain information to do its work. These values, often called arguments, are input by the user<br><br>
+            Python has several inbuilt functions for common tasks that you can use immediately. Later in the course you'll see how to create your own as well!<br>
+            </p>
+          </div>
         </section>
 
         <section>
@@ -220,19 +221,6 @@
         </section>
 
         <section>
-          <h3>More about print</h3>
-          <br>
-          You can supply multiple <i>arguments</i> to the print function and it will concatenate them together with a space between each one.
-          <br><br>
-          <pre><code class="python" data-trim>
-            first = 'Harry'
-            last = 'Potter'
-            greeting = 'Welcome to Hogwarts,'
-            print(greeting, first, last)
-          </code></pre><br>
-        </section>
-
-        <section>
           <h3>Accepting user input</h3>
           What if we could provide data while our code is running?
           <p class="fragment">
@@ -249,6 +237,19 @@
             </code></pre>
             (⭐⭐️) 1b. Ask the user to enter their first and last names, then welcome them to Hogwarts!
           </div>
+        </section>
+
+        <section>
+          <h3>Appendix: More about print</h3>
+          <br>
+          You can supply multiple <i>arguments</i> to the print function and it will concatenate them together with a space between each one.
+          <br><br>
+          <pre><code class="python" data-trim>
+            first = 'Harry'
+            last = 'Potter'
+            greeting = 'Welcome to Hogwarts,'
+            print(greeting, first, last)
+          </code></pre><br>
         </section>
       </div>
     </div>
