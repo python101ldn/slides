@@ -41,9 +41,23 @@
         <section>
           <h3>Dictionaries</h3>
           <p>
-            So far we have seen lists - collections of data, where each element has an index. This index is a number. <br><br>
+            I have a dictionary, and I want to look up the meaning of the word <i>hotel</i>.<br>
+          </p>
+          <p class="fragment">
+            You can describe this data as having a key (hotel) and a value (the definition). This is a data structure in Python!<br>
+          </p>
+          <p class="fragment">
+            Here's a dictionary representing people (keys) and their favourite animals (values):
+            <img src="static/img/dict.png">
+          </p>
+        </section>
 
-            Dictionaries are similar to lists, except the index of each element can be a string too!
+        <section>
+          <h3>Dictionaries</h3>
+          <p>
+            So far we have seen lists, where we grab elements using their numbered position, or index.<br><br>
+
+            Dictionaries are similar to lists, except you access the elements using <b>unordered keys</b>
 
             <div class="fragment">
               <pre><code class="python" data-trim>
@@ -62,53 +76,48 @@
         <section>
           <h3>Dictionaries</h3>
           <p>
-            The indices are called <b>keys</b>.<br>
-            Each key has a <b>value</b> associated with it.<br>
-            So the elements are called <b>key-value pairs</b>.<br><br>
-
+            You can also create a dictionary with data in it:
             <div class="fragment">
               <pre><code class="python" data-trim>
                 # We can define a dictionary in one line too
-                eng_dict = {'hotel': 'An establishment providing accommodation.',
-                 'flight': 'The process of flying through the air.'}
+                eng_dict = {
+                  'hotel': 'An establishment providing accommodation',
+                  'flight': 'The process of flying through the air'
+                }
 
                 print(eng_dict['hotel']) # to print a value from the dictionary
               </code></pre>
             </div>
+            (⭐️) 6a. Create a dictionary of the class' favourite animals
           </p>
         </section>
 
         <section>
           <h3>Dictionary operations</h3>
 
-          We can also modify existing dictionaries - change the value for a given key or delete key-value pairs!
+          We can also modify existing dictionaries - the syntax is the same as adding new values.
           <p>
             <div class="fragment">
               <pre><code class="python" data-trim>
-                inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+                eng_dict = {
+                  'hotel': 'An establishment providing accommodation',
+                  'flight': 'The process of flying through the air'
+                }
 
-                # We can add oranges to our inventory
-                inventory['oranges'] = 317
-                # If someone buys all the pears, we can reassign their value
-                inventory['pears'] = 0
-
-                # Or if we expect to stock no more pears, we can delete the value!
-                del inventory['pears']
-
-                # Let's print what is left in the dictionary
-                print(inventory)
+                eng_dict['hotel'] = 'An establishment providing accommodation, buy now at Hotels.com!'
 
                 # We can find the number of key-value pairs in the dictionary
-                len(inventory) # just like for lists   
+                len(inventory) # just like for lists
               </code></pre>
             </div>
+            (⭐️⭐️) 6b. Use <span id="code">input()</span> to add someone's name and their favourite animal dynamically.
           </p>
         </section>
 
         <section>
           <h3>Dictionary exercise</h3>
 
-          (⭐️⭐️) 6a. Let's access data in a dictionary!
+          (⭐️⭐️) 6c. Let's access data in a dictionary!
           <pre><code class="python" data-trim>
             hotel = {
                 'name': 'Corinthia Hotel',
@@ -174,7 +183,7 @@
           <small>
             <ul>
               <li>
-                (⭐️⭐️) 6b. Let's go shopping! For this exercise use the following dictionary:
+                (⭐️⭐️) 6d. Let's go shopping! For this exercise use the following dictionary:
               </li>
               <ul>
                 <li>
@@ -191,7 +200,7 @@
               </ul>
               </li>
               <li>
-                (⭐️⭐️⭐️) 6c. Add the following functionality to your shopping program:
+                (⭐️⭐️⭐️) 6e. Add the following functionality to your shopping program:
                 <ul>
                   <li>
                     i. If that item doesn't exist, let the user know.
@@ -216,7 +225,7 @@
         <section> 
           <h3>Dictionary creation exercises</h3>          
           <ul>
-          <li>(⭐️️️⭐️️️⭐️) 6d. Write a program that tracks the count of the letters from a string.
+          <li>(⭐️️️⭐️️️⭐️) 6f. Write a program that tracks the count of the letters from a string.
                 <br><br>
                 Given the string <span id="code">'expedia'</span> the expected output is:
                 <br>
@@ -224,14 +233,7 @@
                       {'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}
                 </code></pre>
               </li>
-              <br>              
-              <li>
-                (⭐️⭐️⭐️🔥) 6e. Calculate all possible dice combinations! See 
-                <a href="https://github.com/python101ldn/exercises/blob/master/Session_6/6e_dice_sums.py" target="_blank">
-                  here 
-                </a>
-                for a description.
-              </li>
+              <br>
             </ul>
         </section>
 
