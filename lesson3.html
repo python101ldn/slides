@@ -39,45 +39,59 @@
         </section>
 
         <section>
+            <h3>Lists</h3>
+            <p>
+              A list acts as a single variable to store lots of data.
+              <br><br>
+              Each of those values is called an element of the list and can be accessed by its position, or <b>index</b>.
+              <br><br>
+              <img src="static/img/list.png">
+            </p>
+          </section>
+
+        <section>
           <h3>Lists</h3>
-          <p class="fragment">
-            A list is an ordered set of values, where each value is identified by an index (its position in the list).
-            <br><br>
-            Each of those values is called an element of the list.
-            <br><br>
-          </p>
-          <pre class="fragment"><code class="python" data-trim>
+          <p>
+            In Python, you can define lists like this:
+          <br><br>
+          <pre><code class="python" data-trim>
             # a list of strings
-            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia']
+            
             # a list of numbers
             exam_grades = [40, 55, 99, 73]
+            
             # a list containing mixed types
             a_bit_of_everything = ['hello!', 2, True, 0.535]
+            
             # a list of lists
             words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
           </code></pre>
+          </p>
         </section>
 
         <section>
           <h3>Lists</h3>
-          You can pick out items from a list by using their index.<br>
-          The index starts from 0.
-
+          You can pick out items from a list by using their index which starts from 0, and also ends in -1.
+          <img src="static/img/list_backwards.png" height=180px>
           <pre class="fragment"><code class="python" data-trim>
             # a list of strings
-            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia', 'Egencia'] 
 
             print(expedia_brands[0])  # 'Hotels.com'
             print(expedia_brands[2])  # 'Expedia'
-
-            # a list of numbers
-            exam_grades = [40, 55, 99, 73]
-
-            print(exam_grades[0])  # 40
-            print(exam_grades[-1])  # 73
-            print(exam_grades[-2])  # 99
+            print(expedia_brands[-1])  # 'Egencia'
+            print(expedia_brands[-2])  # 'Expedia'
           </code></pre><br>
         </section>
+
+        <section>
+            <h3>Checkpoint</h3>
+            <br>
+              What error do you see if you try accessing an element that doesn't exist?
+              <br><br>
+              (⭐) 3a. How would you check if the first and last elements of a list are the same?
+          </section>
 
         <section>
           <h3>Lists exercise</h3>
@@ -85,45 +99,40 @@
           It is useful to know the number of items in a list too:
           <pre><code class="python" data-trim>
             # Create a list
-            sentence = ['Programming', 'is', 'really', 'fun']
+            random_numbers = [31, 5.36, 0, 25, 535, 42.3]
             
             length = len(sentence)
-            print(length) # 4
+            print(length) # 6
           </code></pre>
 
           <br>
-
           <div class="fragment">
-            <pre><code class="python" data-trim>
-              random_numbers = [31, 5.36, 0, 25, 535, 42.3]
-            </code></pre>
-            (⭐⭐️) 3a. Write a program to find the average<br>Hint: add all the numbers together then divide by how many numbers there are
+            (⭐⭐️) 3b. Find the average of <span id="code">random_numbers</span><br><br>Hint: add all the numbers together then divide by how many numbers there are
             <br><br>
           </div>
 
         </section>
 
         <section>
-          <h3>Why use lists?</h3>
-          <p>
-            <br>
-            A list acts as a single variable to store lots of data.
-            <br><br>
-            Here are some basic list tricks:
-
+          <h3>Building lists</h3>
+          <p><br>
             <pre><code class="python" data-trim>
-              # Start with an empty list
+              # Start with a list
               sentence = ['Programming', 'is']
               # Add an item to the end
               sentence.append('fun')
 
               print(sentence)
-            </code></pre>
+
+              # To create an empty list
+              empty_list = []
+            </code></pre><br>
+            (⭐⭐️️️) 3c. Build a list of 1-100 yourself using <span id="code">append</span> and a <span id="code">while</span> loop<br>
           </p>
         </section>
 
         <section>
-          <h3>Why use lists?</h3>
+          <h3>Building lists</h3>
           <br>
           We can concatenate two lists together.
 
@@ -140,7 +149,7 @@
         </section>
 
         <section>
-          <h3>Why use lists?</h3>
+          <h3>List Membership</h3>
           Sometimes it's useful to find if an element exists in a given list.
           <pre><code class="python" data-trim>
             expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
@@ -151,9 +160,12 @@
             if 'Hotels.com' in expedia_brands:
               print('Yay!')
           </code></pre>
-          (⭐️⭐️) 3b. Program Bob (version 2)!
+          (⭐️⭐️) 3d. Program Bob (version 2)!
           <br>
-          Get Bob to say '...sup' in response to 'hi', 'hello', 'hey' or 'howdy'. See 
+          Get Bob to say more! See
+          <a href="https://github.com/python101ldn/exercises/blob/master/Session_3/3d_bob_v2.py" target="_blank">
+            here 
+          </a> for the full conversation, and
           <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/2d_bob_solution.py" target="_blank">
             here 
           </a>
@@ -161,10 +173,10 @@
         </section>
 
         <section>
-          <h3>Why use lists?</h3>
+          <h3>Appendix: Sorting & Slicing</h3>
 
           We can sort lists:
-          <pre class="fragment"><code class="python" data-trim>
+          <pre><code class="python" data-trim>
             random_numbers = [5, 3, 4, 6, 1, 2]
             sorted_numbers = sorted(random_numbers)
             print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
@@ -182,12 +194,13 @@
         </section>
 
         <section>
-          <h3>Exercises</h3>
+          <h3>Appendix: Exercises</h3>
+          <br>
           <pre><code class="python" data-trim>
             numbers = [65, 4, 9, 23, 15, 875, 3.69, 33, 12, 79, 6]
-          </code></pre>
-          (⭐️⭐️) 3c. Write a program to print the lowest and highest numbers in a list
-        <!-- TODO: more exercises? or maybe more content e.g. functions or input? -->
+          </code></pre><br>
+          (⭐️⭐️) 3e. Write a program to print the lowest and highest numbers<br>
+          (⭐️⭐️️️️⭐️️️) 3f. Write a program that splits a list into two halves - if there's an odd number of elements the second list will be longer
         </section>
       </div>
     </div>

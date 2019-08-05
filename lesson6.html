@@ -1,52 +1,69 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Week 6 - Dictionaries</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="reveal/css/reveal.css">
-    <!-- Theme set to Simple Serif with custom overrides below -->
-    <link rel="stylesheet" href="reveal/css/theme/simple.css">
-    <link rel="stylesheet" href="static/css/custom.css">
+  <title>Week 6 - Dictionaries</title>
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+  <link rel="stylesheet" href="reveal/css/reveal.css">
+  <!-- Theme set to Simple Serif with custom overrides below -->
+  <link rel="stylesheet" href="reveal/css/theme/simple.css">
+  <link rel="stylesheet" href="static/css/custom.css">
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <!-- TITLE SLIDE -->
-        <section> 
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- TITLE SLIDE -->
+      <section>
+        <br>
+        <h2>Python 101</h2>
+        <h3>Week 6:<br>Dictionaries</h3>
+        <p>
+          <small>Expedia Code Academy</small>
           <br>
-          <h2>Python 101</h2>
-          <h3>Week 6:<br>Dictionaries</h3>
-          <p>
-            <small>Expedia Code Academy</small>
-            <br>
-            <img src="static/img/code_academy_logo.png" border="0px">
-          </p>
-        </section>
+          <img src="static/img/code_academy_logo.png" border="0px">
+        </p>
+      </section>
 
-        <section>
-          <h3>Dictionaries</h3>
-          <p>
-            So far we have seen lists - collections of data, where each element has an index. This index is a number. <br><br>
+      <section>
+        <h3>Dictionaries</h3>
+        <p>
+          I have a dictionary, and I want to look up the meaning of the word <i>hotel</i>.<br>
+        </p>
+        <p class="fragment">
+          You can describe this data as having a key (hotel) and a value (the definition). This is a data structure in
+          Python!<br>
+        </p>
+        <p class="fragment">
+          Here's a dictionary representing people (keys) and their favourite animals (values):
+          <img src="static/img/dict.png">
+        </p>
+      </section>
 
-            Dictionaries are similar to lists, except the index of each element can be a string too!
+      <section>
+        <h3>Dictionaries</h3>
+        <p>
+          So far we have seen lists, where we grab elements using their numbered position, or index.<br><br>
 
-            <div class="fragment">
-              <pre><code class="python" data-trim>
+          Dictionaries are similar to lists, except you access the elements using <b>unordered keys</b>
+
+          <div class="fragment">
+            <pre><code class="python" data-trim>
                 eng_dict = {} # let's create an English dictionary
 
                 # then add words to it
@@ -55,61 +72,60 @@
 
                 print(eng_dict)
               </code></pre>
-            </div>
-          </p>
-        </section>
+          </div>
+        </p>
+      </section>
 
-        <section>
-          <h3>Dictionaries</h3>
-          <p>
-            The indices are called <b>keys</b>.<br>
-            Each key has a <b>value</b> associated with it.<br>
-            So the elements are called <b>key-value pairs</b>.<br><br>
-
-            <div class="fragment">
-              <pre><code class="python" data-trim>
+      <section>
+        <h3>Dictionaries</h3>
+        <p>
+          You can also create a dictionary with data in it:
+          <div>
+            <pre><code class="python" data-trim>
                 # We can define a dictionary in one line too
-                eng_dict = {'hotel': 'An establishment providing accommodation.',
-                 'flight': 'The process of flying through the air.'}
+                eng_dict = {
+                  'hotel': 'An establishment providing accommodation',
+                  'flight': 'The process of flying through the air'
+                }
 
                 print(eng_dict['hotel']) # to print a value from the dictionary
               </code></pre>
-            </div>
-          </p>
-        </section>
+          </div>
+        </p>
+        <p class="fragment">
+        (⭐️) 6a. Create a dictionary of the class' favourite animals
+        </p>
+      </section>
 
-        <section>
-          <h3>Dictionary operations</h3>
+      <section>
+        <h3>Dictionary operations</h3>
 
-          We can also modify existing dictionaries - change the value for a given key or delete key-value pairs!
-          <p>
-            <div class="fragment">
-              <pre><code class="python" data-trim>
-                inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+        We can also modify existing dictionaries - the syntax is the same as adding new values.
+        <p>
+          <div>
+            <pre><code class="python" data-trim>
+                eng_dict = {
+                  'hotel': 'An establishment providing accommodation',
+                  'flight': 'The process of flying through the air'
+                }
 
-                # We can add oranges to our inventory
-                inventory['oranges'] = 317
-                # If someone buys all the pears, we can reassign their value
-                inventory['pears'] = 0
-
-                # Or if we expect to stock no more pears, we can delete the value!
-                del inventory['pears']
-
-                # Let's print what is left in the dictionary
-                print(inventory)
+                eng_dict['hotel'] = 'An establishment providing accommodation, buy now at Hotels.com!'
 
                 # We can find the number of key-value pairs in the dictionary
-                len(inventory) # just like for lists   
+                len(inventory) # just like for lists
               </code></pre>
-            </div>
-          </p>
-        </section>
+          </div>
+        </p>
+        <p class="fragment">
+          (⭐️⭐️) 6b. Use <span id="code">input()</span> to add someone's name and their favourite animal dynamically.
+        </p>
+      </section>
 
-        <section>
-          <h3>Dictionary exercise</h3>
+      <section>
+        <h3>Dictionary exercise</h3>
 
-          (⭐️⭐️) 6a. Let's access data in a dictionary!
-          <pre><code class="python" data-trim>
+        (⭐️⭐️) 6c. Let's access data in a dictionary!
+        <pre><code class="python" data-trim>
             hotel = {
                 'name': 'Corinthia Hotel',
                 'amenities': ['Indoor pool', 'Fitness centre', 'Spa'],
@@ -120,25 +136,25 @@
                  ]
             }
           </code></pre>
-                    
-          <small>
-            How can you:<br>
-            <ul>
-              <li>Access the hotel name?</li>
-              <li>Find out how many amenities it has?</li>
-              <li>Find out the names of the top spots near it?</li>
-              <li>Find out all the top spots within 500 metres reach?</li>
-            </ul>
-          </small>
-        </section>
 
-        <section>
-          <h3>Dictionary methods</h3>
+        <small>
+          How can you:<br>
+          <ul>
+            <li>Access the hotel name?</li>
+            <li>Find out how many amenities it has?</li>
+            <li>Find out the names of the top spots near it?</li>
+            <li>Find out all the top spots within 500 metres reach?</li>
+          </ul>
+        </small>
+      </section>
 
-          We can get lists of all keys or all values.
-          <p>
-            <div class="fragment">
-              <pre><code class="python" data-trim>
+      <section>
+        <h3>Appendix: Dictionary methods</h3>
+
+        We can get lists of all keys or all values.
+        <p>
+          <div class="fragment">
+            <pre><code class="python" data-trim>
                 inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
                 print(inventory.keys())
@@ -146,117 +162,112 @@
                 print(inventory.values())
                 # will print [320, 228, 420]
               </code></pre>
-            </div>
-          </p>
+          </div>
+        </p>
 
-          <span class="fragment">
+        <span class="fragment">
           Or we can check if a dictionary contains a given key, just like in lists. <br>
-          </span>
+        </span>
 
-          <p>
-            <div class="fragment">
-              <pre><code class="python" data-trim>
+        <p>
+          <div class="fragment">
+            <pre><code class="python" data-trim>
                 inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
                 'apples' in inventory # will return True
                 'oranges' in inventory # will return False
               </code></pre>
-            </div>
-          </p>
+          </div>
+        </p>
 
-        </section>
+      </section>
 
-        <section>
-          <h3>Dictionary exercises</h3>          
-          <pre><code class="python" data-trim>
+      <section>
+        <h3>Appendix: Dictionary exercises</h3>
+        <pre><code class="python" data-trim>
               inventory = {'apples': 3, 'pears': 2, 'bananas': 0}
           </code></pre>
-          <small>
+        <small>
+          <ul>
+            <li>
+              (⭐️⭐️) 6d. Let's go shopping! For this exercise use the following dictionary:
+            </li>
             <ul>
               <li>
-                (⭐️⭐️) 6b. Let's go shopping! For this exercise use the following dictionary:
-              </li>
-              <ul>
-                <li>
-                  The program should handle the following scenario:
-                </li>
-                <li>
-                  A shopper would like to buy 1 item. Take user input of what that item is.
-                  <br>
-                  Assume that the user will type 'apples', 'pears' or 'bananas'!
-                </li>
-                <li>
-                  Update the inventory to reflect that purchase - i.e. if someone buys apples, their value would go from 3 to 2.
-                </li>
-              </ul>
+                The program should handle the following scenario:
               </li>
               <li>
-                (⭐️⭐️⭐️) 6c. Add the following functionality to your shopping program:
-                <ul>
-                  <li>
-                    i. If that item doesn't exist, let the user know.
-                  </li>
-                  <li>
-                    ii. If that item is sold out, let the user know.
-                  </li>
-                  <li>
-                    iii. (🔥) Also ask the user for how many items they'd like to buy. Hint: you'll need
-                    <pre><code class="python" data-trim>
+                A shopper would like to buy 1 item. Take user input of what that item is.
+                <br>
+                Assume that the user will type 'apples', 'pears' or 'bananas'!
+              </li>
+              <li>
+                Update the inventory to reflect that purchase - i.e. if someone buys apples, their value would go from 3
+                to 2.
+              </li>
+            </ul>
+            </li>
+            <li>
+              (⭐️⭐️⭐️) 6e. Add the following functionality to your shopping program:
+              <ul>
+                <li>
+                  i. If that item doesn't exist, let the user know.
+                </li>
+                <li>
+                  ii. If that item is sold out, let the user know.
+                </li>
+                <li>
+                  iii. (🔥) Also ask the user for how many items they'd like to buy. Hint: you'll need
+                  <pre><code class="python" data-trim>
                       how_many = input('How many items would you like to buy?')
                       how_many = int(how_many)  # convert string to number (int = integer)
                     </code></pre>
-                  </li>
-                </ul>
-              </li>
-              <br>
-            </ul>
-          </small>
-        </section>
+                </li>
+              </ul>
+            </li>
+            <br>
+          </ul>
+        </small>
+      </section>
 
-        <section> 
-          <h3>Dictionary creation exercises</h3>          
-          <ul>
-          <li>(⭐️️️⭐️️️⭐️) 6d. Write a program that tracks the count of the letters from a string.
-                <br><br>
-                Given the string <span id="code">'expedia'</span> the expected output is:
-                <br>
-                <pre><code class="python" data-trim>
+      <section>
+        <h3>Appendix: Dictionary creation exercises</h3>
+        <ul>
+          <li>(⭐️️️⭐️️️⭐️) 6f. Write a program that tracks the count of the letters from a string.
+            <br><br>
+            Given the string <span id="code">'expedia'</span> the expected output is:
+            <br>
+            <pre><code class="python" data-trim>
                       {'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}
                 </code></pre>
-              </li>
-              <br>              
-              <li>
-                (⭐️⭐️⭐️🔥) 6e. Calculate all possible dice combinations! See 
-                <a href="https://github.com/python101ldn/exercises/blob/master/Session_6/6e_dice_sums.py" target="_blank">
-                  here 
-                </a>
-                for a description.
-              </li>
-            </ul>
-        </section>
+          </li>
+          <br>
+        </ul>
+      </section>
 
-      </div>
     </div>
+  </div>
 
-    <script src="reveal/lib/js/head.min.js"></script>
-    <script src="reveal/js/reveal.js"></script>
+  <script src="reveal/lib/js/head.min.js"></script>
+  <script src="reveal/js/reveal.js"></script>
 
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        dependencies: [
-          { src: 'reveal/plugin/markdown/marked.js' },
-          { src: 'reveal/plugin/markdown/markdown.js' },
-          { src: 'reveal/plugin/notes/notes.js', async: true },
-          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ],
-                history: true,
-          progress: false,
-                center: false, // disable vertical centering of text
-                transition: 'none'
-      });
-    </script>
-  </body>
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [
+        { src: 'reveal/plugin/markdown/marked.js' },
+        { src: 'reveal/plugin/markdown/markdown.js' },
+        { src: 'reveal/plugin/notes/notes.js', async: true },
+        { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ],
+      history: true,
+      progress: false,
+      center: false, // disable vertical centering of text
+      transition: 'none'
+    });
+  </script>
+</body>
+
 </html>
